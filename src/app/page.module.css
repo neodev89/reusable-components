@@ -34,6 +34,21 @@
   grid-row-start: 2;
 }
 
+.homepage {
+  font-size: 34px;
+  line-height: 24px;
+}
+
+.biografia {
+  font-size: 34px;
+  line-height: 24px;
+}
+
+.didattica {
+  font-size: 34px;
+  line-height: 24px;
+}
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;

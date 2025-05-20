@@ -1,11 +1,33 @@
-import Image from "next/image";
+'use client'
+
+//import Image from "next/image";
 import styles from "./page.module.css";
+import Homepage from "./Views/homepage";
+import Didattica from "./Views/didattica";
+import Biografia from "./Views/biografia";
+import React, {useState} from "react";
 
 export default function Home() {
+  const [flagPage, setFlagPage] = useState("Homepage");
+
+  let pageToDisplay=null;
+
+
+
+  switch(flagPage){
+    case "Homepage" : pageToDisplay=<Homepage changePageFunct={setFlagPage} flagPage={flagPage} />
+                      break;
+    case "Didattica": pageToDisplay=<Didattica/>
+                      break;
+    case "Biografia": pageToDisplay=<Biografia/>
+                      break;
+  }
+
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
+       {/*  <Image
           className={styles.logo}
           src="/next.svg"
           alt="Next.js logo"
@@ -44,15 +66,16 @@ export default function Home() {
           >
             Read our docs
           </a>
-        </div>
+        </div> */}
+          {pageToDisplay}
       </main>
       <footer className={styles.footer}>
-        <a
+{/*         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <Image
+        > */}
+         {/*  <Image
             aria-hidden
             src="/file.svg"
             alt="File icon"
@@ -86,10 +109,11 @@ export default function Home() {
             alt="Globe icon"
             width={16}
             height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          /> */}
+       {/*    Go to nextjs.org →
+        </a> */}
       </footer>
     </div>
   );
+
 }
