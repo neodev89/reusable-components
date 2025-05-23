@@ -1,7 +1,6 @@
 'use client'
-
 import { Button } from "@mui/material";
-import styles from "../page.module.css";
+import styles from './style.module.sass';
 import { homepageType } from "../types/homepageType";
 
 export default function Homepage(props:homepageType) {
