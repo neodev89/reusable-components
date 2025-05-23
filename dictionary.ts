@@ -1,4 +1,3 @@
-
 const dictionary: {} = {
   homepageSection : {
     caption: "Riccardo Fiorentino",

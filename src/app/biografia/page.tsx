@@ -1,6 +1,5 @@
 'use client'
-import { LayoutBiografia } from './layout';
-import styles from './style.module.sass'
+import LayoutBiografia from "./layout";
 
 export default function Biografia() {
   return (

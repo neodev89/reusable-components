@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.sass'
 
-export function LayoutBiografia(
+export default function LayoutBiografia(
     { children }:
         {
             children: Readonly<React.ReactNode>
