@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+<<<<<<< Updated upstream
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -44,6 +45,19 @@ export default function Home() {
           >
             Read our docs
           </a>
+=======
+        <div className={styles.div_navbar}>
+          <nav>
+            <button type="button" onClick={() => setFlagPage("homepage")}>Homepage</button>
+            <button type="button" onClick={() => setFlagPage("biografia")}>Biografia</button>
+            <button type="button" onClick={() => setFlagPage("didattica")}>Didattica</button>
+          </nav>
+        </div>
+        <div className={styles.dynamic_components}>
+          {flagPage === 'homepage' && <Homepage />}
+          {flagPage === 'biografia' && <Biografia />}
+          {flagPage === 'didattica' && <Didattica />}
+>>>>>>> Stashed changes
         </div>
       </main>
       <footer className={styles.footer}>

@@ -6,14 +6,13 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,12 +27,60 @@
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  height: 90%;
+  width: 95%;
+  border: 2px groove white;
 }
 
+.div_navbar {
+  position: relative;
+  display: flex;
+  height: 30%;
+  width: 100%;
+  border: 3px double blue;
+}
+
+.dynamic_components {
+  position: relative;
+  display: flex;
+  height: 70%;
+  width: 100%;
+  border: 3px solid red;
+}
+
+<<<<<<< Updated upstream
+=======
+.homepage {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 34px;
+  line-height: 24px;
+}
+
+.biografia {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 34px;
+  line-height: 24px;
+}
+
+.didattica {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 34px;
+  line-height: 24px;
+}
+
+>>>>>>> Stashed changes
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
