@@ -13,27 +13,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-
         <div className={styles.div_navbar}>
-          <nav>
-            <button type="button" onClick={() => setFlagPage("homepage")}>Homepage</button>
-            <button type="button" onClick={() => setFlagPage("biografia")}>Biografia</button>
-            <button type="button" onClick={() => setFlagPage("didattica")}>Didattica</button>
-          </nav>
+          
         </div>
         <div className={styles.dynamic_components}>
           {flagPage === 'homepage' && <Homepage />}
           {flagPage === 'biografia' && <Biografia />}
           {flagPage === 'didattica' && <Didattica />}
         </div>
-        <nav>
-          <button type="button" onClick={() => setFlagPage("homepage")}>Homepage</button>
-          <button type="button" onClick={() => setFlagPage("biografia")}>Biografia</button>
-          <button type="button" onClick={() => setFlagPage("didattica")}>Didattica</button>
-        </nav>
-        {flagPage === 'homepage' && <Homepage />}
-        {flagPage === 'biografia' && <Biografia />}
-        {flagPage === 'didattica' && <Didattica />}
       </main>
     </div>
   );
