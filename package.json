@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.0",
+>>>>>>> 43e5ecd267c6e3297682c3b030858f98100a09e9
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

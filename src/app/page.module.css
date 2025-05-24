@@ -51,8 +51,6 @@
   border: 3px solid red;
 }
 
-<<<<<<< Updated upstream
-=======
 .homepage {
   position: relative;
   display: flex;
@@ -80,7 +78,6 @@
   line-height: 24px;
 }
 
->>>>>>> Stashed changes
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
