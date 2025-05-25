@@ -1,4 +1,4 @@
-import { navbarTypes } from "@/app/@types/navbarTypes";
+import { navbarTypes } from "@/@types/navbarTypes";
 
 export const RsNavbar: React.FC<navbarTypes> = ({
     buttonElements, classNameNav

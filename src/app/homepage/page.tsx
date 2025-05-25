@@ -1,8 +1,8 @@
 'use client'
 import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
-import { ButtonTypes } from '../@types/navbarTypes';
-import { RsNavbar } from '../ui/navbar/RsNavbar';
+import { ButtonTypes } from '../../@types/navbarTypes';
+import { RsNavbar } from '../../ui/navbar/RsNavbar';
 
 export default function Homepage() {
   const btnNav : ButtonTypes[] = [

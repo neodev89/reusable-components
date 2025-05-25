@@ -4,8 +4,8 @@ import Homepage from "./homepage/page";
 import Didattica from "./didattica/page";
 import Biografia from "./biografia/page";
 import { useEffect, useState } from "react";
-import { NextContext } from "./ui/context/myContext";
-import { Navbar } from "./ui/navbar/Navbar";
+import { NextContext } from "../ui/context/myContext";
+import { Navbar } from "../ui/navbar/Navbar";
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("Homepage");
