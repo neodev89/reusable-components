@@ -8,11 +8,9 @@ export const RsNavbar: React.FC<navbarTypes> = ({
             {
                 buttonElements.map((btn) => {
                     return (
-                        <>
                             <button key={btn.id} type="button" className={btn.classNameBtn}>
                                 {btn.children}
                             </button>
-                        </>
                     )
                 })
             }
