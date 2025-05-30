@@ -8,7 +8,7 @@ import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
 
 export default function Home() {
-  const [flagPage, setFlagPage] = useState("Homepage");
+  const [flagPage, setFlagPage] = useState("homepage");
 
   useEffect(() => {
     console.log(flagPage);

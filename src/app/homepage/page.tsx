@@ -1,21 +1,34 @@
 'use client'
 import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
-import { ButtonTypes } from '../../@types/navbarTypes';
-import { RsNavbar } from '../../ui/navbar/RsNavbar';
+import { Title } from '@/ui/Title';
 
 export default function Homepage() {
-  const btnNav : ButtonTypes[] = [
-    { id: "1", classNameBtn: styles.classNameBtn, children: "page1" },
-    { id: "2", classNameBtn: styles.classNameBtn, children: "page2" },
-    { id: "3", classNameBtn: styles.classNameBtn, children: "page3" },
-    { id: "4", classNameBtn: styles.classNameBtn, children: "page4" }
-  ]
+
+  const populationHome = {
+    titolo: "Guai", 
+    home: ["Carosello", "Mortadello", "Pancake"],
+    footer: "cari amici miei"
+  }
 
   return (
     <LayoutHomepage>
-      <div className={styles.home_navbar}>
-        <RsNavbar classNameNav={styles.classNameNav} buttonElements={btnNav} />
+      <div className={styles.title}>
+        <Title>{populationHome.titolo}</Title>
+      </div>
+      <div className={styles.carosello}>
+        <ul>
+        {
+          populationHome.home.map((home, index) => {
+            return (
+              <li key={`${index}`}>{home}</li>
+            )
+          })
+        }
+        </ul>
+      </div>
+      <div className={styles.footer}>
+
       </div>
     </LayoutHomepage>
   );
