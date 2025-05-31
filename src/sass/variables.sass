@@ -1,0 +1,46 @@
+$bg-black: rgb(0, 0, 0)
+$bg-yellow: rgb(255, 255, 1)
+$bg-gray: rgb(192, 192, 192)
+$bg-white: rgb(255, 255,255)
+$bg-dark-gray: rgb(150, 150, 150)
+$border-black: 2px solid rgb(0, 0, 0)
+$border-red: 2px solid rgb(250, 50, 0)
+$border-white: 2px solid rgb(255, 255, 255)
+
+$display-flex: flex
+$direction-rw: row
+$direction-cl: column
+
+$h-div-full: 100%
+$h-div-mid: 80%
+$h-div-small: 50%
+$h-div-15rem: 15rem 
+$h-div-25rem: 25rem
+
+$h-div-max: 100%
+$w-div-max: 100%
+
+$w-div-full: 95%
+$w-div-mid: 85%
+$w-div-small: 50%
+
+@mixin mixin-display-cl
+    display: $display-flex
+    flex-direction: $direction-cl
+
+@mixin mixin-display-rw
+    display: $display-flex
+    flex-direction: $direction-rw
+
+@mixin mixin-flex-center 
+    justify-content: center
+    align-items: center
+
+@mixin mixin-space-around 
+    justify-content: space-around
+    align-items: center
+
+@mixin mixin-family-montserrat-light 
+    font-family: 'Montserrat Alternates'
+    font-weight: 300
+    font-size: 24px

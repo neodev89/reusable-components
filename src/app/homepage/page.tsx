@@ -6,26 +6,31 @@ import { Title } from '@/ui/Title';
 export default function Homepage() {
 
   const populationHome = {
-    titolo: "Guai", 
-    home: ["Carosello", "Mortadello", "Pancake"],
+    titolo: "Guai",
+    home: ["Carosello", "Mortadella", "Pancake"],
     footer: "cari amici miei"
   }
 
   return (
     <LayoutHomepage>
-      <div className={styles.title}>
-        <Title>{populationHome.titolo}</Title>
+      <div className={styles.div_title}>
+        <Title className={styles.title}>
+          {populationHome.titolo}
+        </Title>
       </div>
       <div className={styles.carosello}>
-        <ul>
-        {
-          populationHome.home.map((home, index) => {
-            return (
-              <li key={`${index}`}>{home}</li>
-            )
-          })
-        }
+        <ul className={styles.ul}>
+          {
+            populationHome.home.map((home, index) => {
+              return (
+                <li key={`${index}`}>{home}</li>
+              )
+            })
+          }
         </ul>
+      </div>
+      <div className={styles.main}>
+        
       </div>
       <div className={styles.footer}>
 

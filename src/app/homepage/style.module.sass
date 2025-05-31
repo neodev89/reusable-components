@@ -1,41 +1,71 @@
+@use '../../sass/variables' as variables
 .homepage
-    position: relative
-    display: flex
-    flex-direction: column
+    @include variables.mixin-display-cl
     height: 100%
     width: 100%
-    border: 1px solid white
+    border: variables.$border-white
     font-size: 34px
     line-height: 24px
+    padding: 0 1rem
+
+.div_title
+    @include variables.mixin-display-rw
+    justify-content: center
+    align-items: center
+    height: 10rem
+    width: 100%
+    border: variables.$border-black
 
 .title
-    position: relative
-    display: flex
-    height: 20rem
-    width: 100%
-    background-color: rgb(255, 255, 255)
+    @include variables.mixin-display-rw
+    @include variables.mixin-flex-center
+    background-color: variables.$bg-gray
+    border: variables.$border-red
     padding: 0.2rem
+    color: rgb(0, 0, 0)
+    height: variables.$h-div-max
+    width: variables.$w-div-small
 
 .carosello
-    position: relative
-    display: flex
-    height: 50%
+    @include variables.mixin-display-rw
+    @include variables.mixin-flex-center
+    height: 20rem
     width: 100%
-    border: 3px double blue 
+    border: 3px double blue
+    background-color: variables.$bg-white
+    color: rgb(0, 0, 0)
+
+.ul
+    @include variables.mixin-display-cl
+    @include variables.mixin-family-montserrat-light
+    height: variables.$h-div-mid
+    width: variables.$w-div-full
+    line-height: 30px
+    padding-left: 1.5rem
+    border: variables.$border-black
+    overflow-y: auto
+    overflow-x: hidden
+
+.main 
+    @include variables.mixin-display-rw
+    @include variables.mixin-flex-center
+    height: variables.$h-div-max
+    width: variables.$w-div-max
+    border: variables.$border-white
 
 .footer
     position: relative
     display: flex
     height: 40rem
     width: 100%
-    border: 3px double red 
+    border: 3px double red
 
 .home_navbar
     position: relative
     display: flex
     height: 20%
     width: 100%
-    background-color: rgb(255, 255, 255)
+    background-color: variables.$bg-white
 
 .classNameNav
     position: relative
@@ -46,7 +76,6 @@
     height: 50px
     width: 100%
     border: 3px double black
-
 
 .classNameBtn
     position: relative
