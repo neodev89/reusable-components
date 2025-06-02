@@ -1,0 +1,24 @@
+{
+    "navbar": [
+        {
+            "id": "0",
+            "page": "homepage"
+        },
+        {
+            "id": "1",
+            "page": "didattica"
+        },
+        {
+            "id": "2",
+            "page": "biografia"
+        },
+        {
+            "id": "3",
+            "page": "blog"
+        },
+        {
+            "id": "4",
+            "page": "contatti"
+        }
+    ]
+}

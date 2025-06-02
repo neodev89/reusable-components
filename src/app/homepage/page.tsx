@@ -3,13 +3,12 @@ import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
 
 import { Title } from '@/ui/Title';
-import { carouselType } from '@/@types/carosello';
+import { carouselType } from '@/@types/components';
 import { Carousel } from '@/ui/carosello/carousel';
 
 export default function Homepage() {
 
   const carouselImg: carouselType = {
-    key: 0,
     img: [
       {
         src: '/Codice1.jpeg',
@@ -51,7 +50,7 @@ export default function Homepage() {
     <LayoutHomepage>
       <div className={styles.div_title}>
         <Title className={styles.title}>
-          Carosello
+          Sito Internet
         </Title>
       </div>
       <div className={styles.carosello}>

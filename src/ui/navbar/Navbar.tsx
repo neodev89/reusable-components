@@ -1,18 +1,29 @@
 "use client";
-import { useContext, useEffect } from "react"
-import { NextContext } from "../context/myContext"
-import styles from './styles.module.sass';
 
-export const Navbar = () => {
-    const context = useContext(NextContext);
-    useEffect(() => {
-        console.log("pagina caricata");
-    }, [context?.value])
+import { navbarJsonType } from "@/@types/navbarTypes";
+
+export const Navbar = ({
+    navbar,
+    setValue,
+    classNameNavbar,
+    classNameButtons
+}: navbarJsonType) => {
     return (
-        <nav className={styles.navbar}>
-            <button type="button" className={styles.button_navbar} onClick={() => context?.setValue("homepage")}>Homepage</button>
-            <button type="button" className={styles.button_navbar} onClick={() => context?.setValue("didattica")}>Didattica</button>
-            <button type="button" className={styles.button_navbar} onClick={() => context?.setValue("biografia")}>Biografia</button>
+        <nav className={classNameNavbar}>
+            {
+                navbar.map((nav) => {
+                    return (
+                        <button
+                            key={nav.id}
+                            type="button"
+                            className={classNameButtons}
+                            onClick={() => setValue(nav.page)}
+                        >
+                            {nav.page}
+                        </button>
+                    )
+                })
+            }
         </nav>
     );
 }

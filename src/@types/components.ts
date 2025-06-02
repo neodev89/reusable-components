@@ -1,5 +1,4 @@
 interface carouselType {
-    key: number;
     img: Array<imgType>;
     classNameCarousel: string;
     classNameDivImg: string;
@@ -14,6 +13,10 @@ interface imgType {
     key: string;
     height: number;
     width: number;
+}
+
+interface mainType {
+    
 }
 
 

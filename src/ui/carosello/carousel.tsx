@@ -1,10 +1,10 @@
 "use client";
-import { carouselType } from "@/@types/carosello"
+import { carouselType } from "@/@types/components"
 import Image from "next/image";
 import { useState } from "react";
 
 export const Carousel = ({
-    key, img, classNameCarousel, classNameDivImg, classNameImg,
+    img, classNameCarousel, classNameDivImg, classNameImg,
     classNameDivBtn, classNameBtn,
 }: carouselType) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -18,7 +18,7 @@ export const Carousel = ({
     };
 
     return (
-        <div key={key} className={classNameCarousel}>
+        <div className={classNameCarousel}>
             <div className={classNameDivImg}>
                 <Image
                     className={classNameImg}

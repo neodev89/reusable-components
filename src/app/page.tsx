@@ -9,9 +9,11 @@ import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
 
 import Head from "next/head";
+import navbar from '../dynamic_navbar/navbar.json';
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("homepage");
+  const data = navbar.navbar
 
   useEffect(() => {
     console.log(flagPage);
@@ -29,12 +31,25 @@ export default function Home() {
       <div className={styles.page}>
         <main className={styles.main}>
           <div className={styles.div_navbar}>
-            <Navbar />
+            <Navbar navbar={data} classNameNavbar={styles.navbar} classNameButtons={styles.classNameBtn} setValue={setFlagPage} />
           </div>
           <div className={styles.dynamic_components}>
-            {flagPage === 'homepage' && <Homepage />}
-            {flagPage === 'biografia' && <Biografia />}
-            {flagPage === 'didattica' && <Didattica />}
+            <div className={styles.divCol}>
+              {/**Div con figure colorate. Il div sarà un rettangolo alto
+               * contenente un motivo colorato (magari un triangolo rettangolo blue)
+               */}
+            </div>
+            <div className={styles.divCenter}>
+              {flagPage === 'homepage' && <Homepage />}
+              {flagPage === 'biografia' && <Biografia />}
+              {flagPage === 'didattica' && <Didattica />}
+            </div>
+            <div className={styles.divCol}>
+              {/**Div con figure colorate. Il div sarà un rettangolo alto
+               * contenente un motivo colorato (magari un triangolo rettangolo blue)
+               */}
+            </div>
+
           </div>
         </main>
       </div>
