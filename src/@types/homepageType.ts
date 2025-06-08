@@ -1,5 +1,7 @@
+import { Dispatch } from "react";
+
 type homepageType = {
-    changePageFunct : React.Dispatch<React.SetStateAction<string>>,
+    changePageFunct : Dispatch<React.SetStateAction<string>>,
     flagPage:string
 }
 

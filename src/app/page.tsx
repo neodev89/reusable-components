@@ -31,7 +31,12 @@ export default function Home() {
       <div className={styles.page}>
         <main className={styles.main}>
           <div className={styles.div_navbar}>
-            <Navbar navbar={data} classNameNavbar={styles.navbar} classNameButtons={styles.classNameBtn} setValue={setFlagPage} />
+            <Navbar
+              navbar={data}
+              classNameNavbar={styles.navbar}
+              classNameButtons={styles.classNameBtn}
+              setValue={setFlagPage}
+            />
           </div>
           <div className={styles.dynamic_components}>
             <div className={styles.divCol}>

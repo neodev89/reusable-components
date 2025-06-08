@@ -5,6 +5,9 @@ import LayoutHomepage from "./layout";
 import { Title } from '@/ui/Title';
 import { carouselType } from '@/@types/components';
 import { Carousel } from '@/ui/carosello/carousel';
+import { Main } from '@/ui/main/main';
+import { Navbar } from '@/ui/navbar/Navbar';
+
 
 export default function Homepage() {
 
@@ -57,6 +60,13 @@ export default function Homepage() {
         <Carousel {...carouselImg} />
       </div>
       <div className={styles.main}>
+        <Main 
+          classNameMain={styles.main}
+          classNameNavbarMain={styles.navbar_main}
+          classNameBodyMain={styles.body_main} 
+          children1={<Navbar />} 
+          children2={<BodyMain />} 
+        />
 
       </div>
       <div className={styles.footer}>

@@ -1,3 +1,5 @@
+import { ReactElement, ReactNode } from "react";
+
 interface carouselType {
     img: Array<imgType>;
     classNameCarousel: string;
@@ -16,8 +18,12 @@ interface imgType {
 }
 
 interface mainType {
-    
+    classNameMain: string;
+    classNameNavbarMain: string;
+    classNameBodyMain: string;
+    children1: ReactNode | ReactElement[];
+    children2: ReactNode;
 }
 
 
-export type { carouselType };
+export type { carouselType, mainType };
