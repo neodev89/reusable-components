@@ -89,7 +89,6 @@ export default function Homepage() {
             />
           }
         />
-
       </div>
       <div className={styles.footer}>
 
