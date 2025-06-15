@@ -70,11 +70,16 @@
     overflow-x: hidden
 
 .main 
-    @include variables.mixin-display-rw
+    @include variables.mixin-display-cl
     @include variables.mixin-flex-center
     height: variables.$h-div-max
     width: variables.$w-div-max
     border: variables.$border-white
+
+.body_main
+    @include variables.mixin-display-rw
+    height: auto
+    width: 100%
 
 .footer
     position: relative
@@ -98,7 +103,7 @@
     align-items: center
     height: 50px
     width: 100%
-    border: 3px double black
+    border: 5px double black
 
 .classNameDivBtn
     @include variables.mixin-display-rw
@@ -122,3 +127,15 @@
     font-family: serif
     font-size: 14px
     font-weight: 400
+
+.classNameBodyMain
+    @include variables.mixin-display-rw
+    border: variables.$border-black
+    height: auto
+    min-height: 300px
+    width: 100%
+    padding: 5px
+    font-family: 'Montserrat', sans-serif
+    font-size: 14px
+    font-weight: 400
+    

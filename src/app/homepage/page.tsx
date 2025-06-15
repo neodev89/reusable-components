@@ -1,15 +1,20 @@
 'use client'
 import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
+import dynamic_homepage from '@/dynamic_navbar/dynamic_text_homepage.json';
 
 import { Title } from '@/ui/Title';
 import { carouselType } from '@/@types/components';
 import { Carousel } from '@/ui/carosello/carousel';
 import { Main } from '@/ui/main/main';
-import { Navbar } from '@/ui/navbar/Navbar';
+import { SecondNavbar } from '@/ui/navbar/Navbar';
+import { useEffect, useState } from 'react';
+import { BodyMain } from '@/ui/main/bodyMain';
 
 
 export default function Homepage() {
+  const home = dynamic_homepage.dynamic_homepage;
+  const [isHome, setIsHome] = useState<string>("page-1");
 
   const carouselImg: carouselType = {
     img: [
@@ -49,6 +54,10 @@ export default function Homepage() {
     classNameBtn: styles.classNameBtn
   }
 
+  useEffect(() => {
+    console.log("Ecco lo stato:", isHome);
+  }, [isHome]);
+
   return (
     <LayoutHomepage>
       <div className={styles.div_title}>
@@ -60,12 +69,25 @@ export default function Homepage() {
         <Carousel {...carouselImg} />
       </div>
       <div className={styles.main}>
-        <Main 
+        <Main
           classNameMain={styles.main}
           classNameNavbarMain={styles.navbar_main}
-          classNameBodyMain={styles.body_main} 
-          children1={<Navbar />} 
-          children2={<BodyMain />} 
+          classNameBodyMain={styles.body_main}
+          children1={
+            <SecondNavbar
+              navbar={home}
+              classNameNavbar={styles.classNameNav}
+              classNameButtons={styles.classNameBtn}
+              setValue={setIsHome}
+            />
+          }
+          children2={
+            <BodyMain
+              classNameBodyMain={styles.classNameBodyMain}
+              state={isHome}
+              text={home}
+            />
+          }
         />
 
       </div>

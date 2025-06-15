@@ -26,6 +26,32 @@ export const Navbar = ({
     );
 }
 
+export const SecondNavbar = ({
+    navbar,
+    setValue,
+    classNameNavbar,
+    classNameButtons,
+}: navbarJsonType) => {
+    return (
+        <nav className={classNameNavbar}>
+            {
+                navbar.map((nav) => {
+                    return (
+                        <button
+                            key={nav.id}
+                            type="button"
+                            className={classNameButtons}
+                            onClick={() => setValue(nav.id)}
+                        >
+                            {nav.id}
+                        </button>
+                    )
+                })
+            }
+        </nav>
+    );
+}
+
 /**import { useEffect, useState } from "react";
 import { navbarJsonType } from "@/@types/navbarTypes";
 

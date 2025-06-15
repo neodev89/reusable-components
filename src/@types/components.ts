@@ -21,9 +21,15 @@ interface mainType {
     classNameMain: string;
     classNameNavbarMain: string;
     classNameBodyMain: string;
-    children1: ReactNode | ReactElement[];
+    children1: ReactNode;
     children2: ReactNode;
 }
 
+interface bodyMainType {
+    classNameBodyMain: string;
+    state: string;
+    text: Array<{ id: string, page: ReactNode }>;
+}
 
-export type { carouselType, mainType };
+
+export type { carouselType, mainType, bodyMainType };
