@@ -1,5 +1,6 @@
 'use client'
 import styles from "./page.module.css";
+import stylesDivCol from './page.module.sass';
 import Homepage from "./homepage/page";
 import Didattica from "./didattica/page";
 import Biografia from "./biografia/page";
@@ -10,6 +11,7 @@ import { Navbar } from "../ui/navbar/Navbar";
 
 import Head from "next/head";
 import navbar from '../dynamic_navbar/navbar.json';
+import { DivCol } from "@/ui/div_col/div_col";
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("homepage");
@@ -39,11 +41,15 @@ export default function Home() {
             />
           </div>
           <div className={styles.dynamic_components}>
-            <div className={styles.divCol}>
-              {/**Div con figure colorate. Il div sarà un rettangolo alto
-               * contenente un motivo colorato (magari un triangolo rettangolo blue)
-               */}
-            </div>
+            <DivCol
+              classNameDivCol={stylesDivCol.div_col}
+              classNameImgCol={stylesDivCol.img_col}
+              classNameImg={stylesDivCol.img}
+              height={1016}
+              width={100}
+              src={'./Frame16_1.svg'}
+              alt={'triangolo-blue'}
+            />
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
               {flagPage === 'biografia' && <Biografia />}

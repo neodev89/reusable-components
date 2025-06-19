@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface carouselType {
     img: Array<imgType>;
@@ -31,5 +31,15 @@ interface bodyMainType {
     text: Array<{ id: string, page: ReactNode }>;
 }
 
+interface divColType {
+    classNameDivCol: string;
+    classNameImgCol: string;
+    classNameImg: string;
+    height: number;
+    width: number;
+    src: string;
+    alt: string;
+}
 
-export type { carouselType, mainType, bodyMainType };
+
+export type { carouselType, mainType, bodyMainType, divColType };

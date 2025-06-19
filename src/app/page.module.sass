@@ -1,0 +1,21 @@
+@use '../sass/variables'
+
+.div_col
+    @include variables.mixin-display-rw
+    @include variables.mixin-flex-center
+    min-height: 100%
+    width: 10%
+
+.img_col
+    @include variables.mixin-display-rw
+    justify-content: flex-start
+    min-height: 100%
+    width: 100%
+
+.img
+    display: flex
+    justify-content: flex-start
+    object-fit: contain
+    object-position: center
+    background-repeat: no-repeat
+    background-position: center

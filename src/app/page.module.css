@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: green;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
 }
 
@@ -17,6 +17,7 @@
   height: 90%;
   width: 98%;
   border: 2px groove white;
+  background-color: transparent;
 }
 
 .div_navbar {
