@@ -4,8 +4,10 @@ import stylesDivCol from './page.module.sass';
 import Homepage from "./homepage/page";
 import Didattica from "./didattica/page";
 import Biografia from "./biografia/page";
+import TopTriangle from '../../public/Disegno_blue_inverso_lungo.svg';
+import InverseTopTriangle from '../../public/Disegno_blue_lungo.svg';
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
 
@@ -15,7 +17,11 @@ import { DivCol } from "@/ui/div_col/div_col";
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("homepage");
-  const data = navbar.navbar
+  const data = navbar.navbar;
+
+  const setValuePage = useCallback((val: string) => {
+    setFlagPage(val);
+  }, []);
 
   useEffect(() => {
     console.log(flagPage);
@@ -23,7 +29,7 @@ export default function Home() {
 
   return (
     <NextContext.Provider value={
-      { value: flagPage, setValue: setFlagPage }
+      { value: flagPage, setValue: setValuePage }
     }>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -37,30 +43,26 @@ export default function Home() {
               navbar={data}
               classNameNavbar={styles.navbar}
               classNameButtons={styles.classNameBtn}
-              setValue={setFlagPage}
+              setValue={setValuePage}
             />
           </div>
           <div className={styles.dynamic_components}>
             <DivCol
               classNameDivCol={stylesDivCol.div_col}
               classNameImgCol={stylesDivCol.img_col}
-              classNameImg={stylesDivCol.img}
-              height={1016}
-              width={100}
-              src={'./Frame16_1.svg'}
-              alt={'triangolo-blue'}
+              classNameTriangle={stylesDivCol.classNameTriangle}
+              Triangle={TopTriangle}
             />
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
               {flagPage === 'biografia' && <Biografia />}
               {flagPage === 'didattica' && <Didattica />}
             </div>
-            <div className={styles.divCol}>
-              {/**Div con figure colorate. Il div sarà un rettangolo alto
-               * contenente un motivo colorato (magari un triangolo rettangolo blue)
-               */}
-            </div>
-
+              <DivCol
+                Triangle={InverseTopTriangle}
+                classNameDivCol={stylesDivCol.div_col}
+                classNameImgCol={stylesDivCol.img_col}
+                classNameTriangle={stylesDivCol.classNameTriangle} />
           </div>
         </main>
       </div>

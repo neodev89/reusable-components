@@ -1,7 +1,7 @@
 "use client";
 import { carouselType } from "@/@types/components"
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 export const Carousel = ({
     img, classNameCarousel, classNameDivImg, classNameImg,
@@ -9,13 +9,13 @@ export const Carousel = ({
 }: carouselType) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-    const nextImage = useCallback(() => {
+    const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % img.length);
-    }, [img.length]);
+    };
 
-    const prevImage = useCallback(() => {
+    const prevImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? img.length - 1 : prevIndex - 1));
-    }, [img.length]);
+    };
 
     return (
         <div className={classNameCarousel}>

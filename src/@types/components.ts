@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ComponentType, JSX, ReactElement, ReactNode } from "react";
 
 interface carouselType {
     img: Array<imgType>;
@@ -34,11 +34,8 @@ interface bodyMainType {
 interface divColType {
     classNameDivCol: string;
     classNameImgCol: string;
-    classNameImg: string;
-    height: number;
-    width: number;
-    src: string;
-    alt: string;
+    classNameTriangle: string;
+    Triangle: ComponentType<{ className: string }>;
 }
 
 

@@ -1,9 +1,9 @@
 "use client";
-import { createContext, Dispatch, SetStateAction } from "react";
+import { createContext } from "react";
 
 export interface nextContextType {
     value: string;
-    setValue: Dispatch<SetStateAction<string>>;
+    setValue: (val: string) => void;
 }
 
 // Creazione del contesto senza valore di default

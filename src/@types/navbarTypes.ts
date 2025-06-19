@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { ReactNode } from "react";
 
 interface navbarTypes {
     buttonElements:  Array<ButtonTypes>;
@@ -12,10 +12,15 @@ interface ButtonTypes {
 }
 
 interface navbarJsonType {
-    navbar: Array<{id: string, page: string}>;
-    setValue: Dispatch<SetStateAction<string>>;
+    navbar: Array<navbarType>;
+    setValue: (value: string) => void;
     classNameNavbar: string;
     classNameButtons: string;
 }
 
-export type { navbarTypes, ButtonTypes, navbarJsonType };
+type navbarType = {
+    id: string;
+    page: string;
+}
+
+export type { navbarTypes, ButtonTypes, navbarJsonType, navbarType };

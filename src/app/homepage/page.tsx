@@ -10,10 +10,12 @@ import { Main } from '@/ui/main/main';
 import { SecondNavbar } from '@/ui/navbar/Navbar';
 import { useEffect, useState } from 'react';
 import { BodyMain } from '@/ui/main/bodyMain';
+import { navbarType } from '@/@types/navbarTypes';
 
 
 export default function Homepage() {
-  const home = dynamic_homepage.dynamic_homepage;
+  const [dataNav, setDataNav] = useState<Array<navbarType>>([]);
+
   const [isHome, setIsHome] = useState<string>("page-1");
 
   const carouselImg: carouselType = {
@@ -56,6 +58,26 @@ export default function Homepage() {
 
   useEffect(() => {
     console.log("Ecco lo stato:", isHome);
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/take-data", {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+
+        if (!res.ok) {
+          console.error("Errore nel recupero dati dalla API")
+        }
+
+        const dati: Array<navbarType> = await res.json();
+        console.log(dati);
+        setDataNav(dati);
+      } catch (error) {
+        console.error("Errore nel try-catch: ", error);
+      }
+    }
+    fetchData();
   }, [isHome]);
 
   return (
@@ -75,7 +97,7 @@ export default function Homepage() {
           classNameBodyMain={styles.body_main}
           children1={
             <SecondNavbar
-              navbar={home}
+              navbar={dataNav}
               classNameNavbar={styles.classNameNav}
               classNameButtons={styles.classNameBtn}
               setValue={setIsHome}
@@ -85,7 +107,7 @@ export default function Homepage() {
             <BodyMain
               classNameBodyMain={styles.classNameBodyMain}
               state={isHome}
-              text={home}
+              text={dataNav}
             />
           }
         />
