@@ -6,8 +6,7 @@
     border: variables.$border-white
     font-size: 34px
     line-height: 24px
-    padding: 0 1rem
-    gap: 5px
+    gap: 2rem
 
 .div_title
     @include variables.mixin-display-rw
@@ -86,23 +85,21 @@
 
 .main 
     @include variables.mixin-display-cl
-    @include variables.mixin-flex-center
+    // @include variables.mixin-flex-center
     height: variables.$h-div-max
     width: variables.$w-div-max
     border: variables.$border-white
-    gap: 5px
 
-.body_main
+.navbar_main
     @include variables.mixin-display-rw
     height: auto
     width: 100%
+    justify-content: center
 
-.footer
-    position: relative
-    display: flex
+.body_main
+    @include variables.mixin-display-rw
     height: 30rem
     width: 100%
-    border: 3px double red
 
 .home_navbar
     position: relative
@@ -115,7 +112,7 @@
     position: relative
     display: flex
     flex-direction: row
-    justify-content: stretch
+    justify-content: center
     align-items: center
     height: 50px
     width: 100%

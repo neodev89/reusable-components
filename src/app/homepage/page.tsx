@@ -1,7 +1,6 @@
 'use client'
 import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
-import dynamic_homepage from '@/dynamic_navbar/dynamic_text_homepage.json';
 
 import { Title } from '@/ui/Title';
 import { carouselType } from '@/@types/components';
@@ -90,31 +89,26 @@ export default function Homepage() {
       <div className={styles.carosello}>
         <Carousel {...carouselImg} />
       </div>
-      <div className={styles.main}>
-        <Main
-          classNameMain={styles.main}
-          classNameNavbarMain={styles.navbar_main}
-          classNameBodyMain={styles.body_main}
-          children1={
-            <SecondNavbar
-              navbar={dataNav}
-              classNameNavbar={styles.classNameNav}
-              classNameButtons={styles.classNameBtn}
-              setValue={setIsHome}
-            />
-          }
-          children2={
-            <BodyMain
-              classNameBodyMain={styles.classNameBodyMain}
-              state={isHome}
-              text={dataNav}
-            />
-          }
-        />
-      </div>
-      <div className={styles.footer}>
-
-      </div>
+      <Main
+        classNameMain={styles.main}
+        classNameNavbarMain={styles.navbar_main}
+        classNameBodyMain={styles.body_main}
+        children1={
+          <SecondNavbar
+            navbar={dataNav}
+            classNameNavbar={styles.classNameNav}
+            classNameButtons={styles.classNameBtn}
+            setValue={setIsHome}
+          />
+        }
+        children2={
+          <BodyMain
+            classNameBodyMain={styles.classNameBodyMain}
+            state={isHome}
+            text={dataNav}
+          />
+        }
+      />
     </LayoutHomepage>
   );
 }

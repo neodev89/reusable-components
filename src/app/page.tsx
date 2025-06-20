@@ -4,8 +4,8 @@ import stylesDivCol from './page.module.sass';
 import Homepage from "./homepage/page";
 import Didattica from "./didattica/page";
 import Biografia from "./biografia/page";
-import TopTriangle from '../../public/Disegno_blue_inverso_lungo.svg';
-import InverseTopTriangle from '../../public/Disegno_blue_lungo.svg';
+import DarkTriangle from '../../public/Disegno_blue_inverso_dark.svg';
+import DarkTriangle2 from '../../public/Disegno_blue_inverso2_dark.svg';
 
 import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";
@@ -51,18 +51,24 @@ export default function Home() {
               classNameDivCol={stylesDivCol.div_col}
               classNameImgCol={stylesDivCol.img_col}
               classNameTriangle={stylesDivCol.classNameTriangle}
-              Triangle={TopTriangle}
+              Triangle={DarkTriangle}
             />
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
               {flagPage === 'biografia' && <Biografia />}
               {flagPage === 'didattica' && <Didattica />}
+              <div className={styles.footer}>
+                <div className={styles.internal_footer}>
+                  <p>Footer Footer Footer</p>
+                </div>
+              </div>
             </div>
-              <DivCol
-                Triangle={InverseTopTriangle}
-                classNameDivCol={stylesDivCol.div_col}
-                classNameImgCol={stylesDivCol.img_col}
-                classNameTriangle={stylesDivCol.classNameTriangle} />
+            <DivCol
+              Triangle={DarkTriangle2}
+              classNameDivCol={stylesDivCol.div_col}
+              classNameImgCol={stylesDivCol.img_col}
+              classNameTriangle={stylesDivCol.classNameTriangle}
+            />
           </div>
         </main>
       </div>

@@ -57,7 +57,8 @@
 .dynamic_components {
   position: relative;
   display: flex;
-  height: 70%;
+  flex-direction: row;
+  height: 100%;
   width: 100%;
   border: 3px solid red;
 }
@@ -73,9 +74,13 @@
 .divCenter {
   position: relative;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
   width: 80%;
-  border: 1px solid darkorange;
+  border: 3px groove rgb(0, 255, 38);
+  padding-top: 1rem;
+  gap: 2rem;
 }
 
 .homepage {
@@ -103,6 +108,35 @@
   width: 100%;
   font-size: 34px;
   line-height: 24px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.4rem;
+  height: 100%;
+  width: 97%;
+  border: 3px double red;
+}
+
+.internal_footer {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 14rem;
+  width: 100%;
+  border: 1px dotted blue;;
+}
+
+.internal_footer p {
+  width: auto;
+  min-width: 12rem;
+  height: auto;
+  max-height: 5rem;
+  color: black;
 }
 
 .main code {
