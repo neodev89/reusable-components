@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-   sodipodi:docname="Disegno_blue.svg"
+   sodipodi:docname="Disegno_blue_inverso_lungo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +30,8 @@
      inkscape:document-units="mm"
      showguides="false"
      inkscape:zoom="0.4894542"
-     inkscape:cx="-1.021546"
-     inkscape:cy="401.46759"
+     inkscape:cx="-2.0430921"
+     inkscape:cy="726.31923"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -46,8 +46,8 @@
      id="layer1"
      transform="translate(0.50198606,0.70638757)">
     <path
-       style="fill:#0000ff;fill-rule:evenodd;stroke:#ffcb00;stroke-width:1.26091;stroke-dasharray:0.315228, 0.315228;stroke-dashoffset:1.26091;paint-order:stroke fill markers"
-       d="m 99.691772,-0.07593422 -99.139311,0.22737 C 90.021344,162.72404 50.702547,986.58188 99.680651,998.65227 Z"
+       style="fill:#0000c7;fill-opacity:1;fill-rule:evenodd;stroke:#ffcb00;stroke-width:1.26091;stroke-dasharray:0.315228, 0.315228;stroke-dashoffset:1.26091;paint-order:stroke fill markers"
+       d="m 99.691772,-0.07593422 -99.13931102,0.22737 C 90.021344,162.72404 50.702547,986.58188 99.680651,998.65227 Z"
        id="path1"
        sodipodi:nodetypes="cccc" />
   </g>

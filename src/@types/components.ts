@@ -1,4 +1,4 @@
-import { ComponentType, JSX, ReactElement, ReactNode } from "react";
+import { ComponentType, ReactNode } from "react";
 
 interface carouselType {
     img: Array<imgType>;
@@ -38,5 +38,12 @@ interface divColType {
     Triangle: ComponentType<{ className: string }>;
 }
 
+interface squareFooterType {
+    classDivPropertyFooter: string;
+    classNamePropertyFooter: string;
+    classValuePropertyFooter: string;
+    properties: Array<{ name: string, value: string }>;
+}
 
-export type { carouselType, mainType, bodyMainType, divColType };
+
+export type { carouselType, mainType, bodyMainType, divColType, squareFooterType };
