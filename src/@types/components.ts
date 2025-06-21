@@ -41,8 +41,15 @@ interface divColType {
 interface squareFooterType {
     classDivPropertyFooter: string;
     classNamePropertyFooter: string;
+    classImg?: string;
     classValuePropertyFooter: string;
-    properties: Array<{ name: string, value: string }>;
+    properties: Array<propertyType>;
+}
+
+interface propertyType {
+    name: string;
+    value: string;
+    pathImg: string | null;
 }
 
 

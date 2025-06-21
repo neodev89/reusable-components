@@ -1,14 +1,8 @@
-import { Dispatch } from "react";
-
-type homepageType = {
-    changePageFunct : Dispatch<React.SetStateAction<string>>,
-    flagPage:string
-}
-
 interface dictionary {
     homepage: typeHomepage;
     biografia: typeBiografia;
     didattica: typeDidattica;
+    footerProperties: Array<footerType>;
 }
 
 interface typeHomepage {
@@ -25,15 +19,24 @@ interface typeBiografia {
     text3: string;
     urlImmagine1: string;
     urlImmagine2: string;
+    urlImmagine3: string;
 }
 
-interface typeDidattica {
-    caption: string;
-    text1: string;
-    text2: string;
-    text3: string;
-    urlImmagine1: string;
-    urlImmagine2: string;
+type typeDidattica = Omit<typeBiografia, "urlImmagine3">
+
+interface footerType {
+  name: string;
+  value: unionValue;
+  pathImmagine: unionPathImmagine;
 }
 
-export type { homepageType, dictionary };
+type unionValue = string | number;
+type unionPathImmagine = string | null;
+
+export type { 
+    dictionary,
+    typeHomepage,
+    typeBiografia,
+    typeDidattica,
+    footerType
+ };
