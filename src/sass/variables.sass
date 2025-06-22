@@ -23,7 +23,7 @@ $direction-cl: column
 $h-div-full: 100%
 $h-div-mid: 80%
 $h-div-small: 50%
-$h-div-15rem: 15rem 
+$h-div-15rem: 15rem
 $h-div-25rem: 25rem
 
 $h-div-max: 100%
@@ -33,6 +33,25 @@ $w-div-full: 95%
 $w-div-mid: 85%
 $w-div-small: 50%
 
+$h-auto: auto
+$h-100: 100%
+
+$w-auto: auto
+$w-100: 100%
+
+$j-center: center
+$j-around: space-around
+$j-between: space-between
+$j-evenly: space-evenly
+$j-stretch: stretch
+
+$item-center: center
+
+@mixin mixin-display($display, $flex, $bg)
+    display: $display
+    flex-direction: $flex
+    background-color: $bg
+
 @mixin mixin-display-cl
     display: $display-flex
     flex-direction: $direction-cl
@@ -41,20 +60,208 @@ $w-div-small: 50%
     display: $display-flex
     flex-direction: $direction-rw
 
-@mixin mixin-flex-center 
+@mixin mixin-flex-center
     justify-content: center
     align-items: center
 
-@mixin mixin-space-around 
+@mixin mixin-space-around
     justify-content: space-around
     align-items: center
 
-@mixin mixin-family-montserrat-light 
+@mixin mixin-family-montserrat-light
     font-family: 'Montserrat Alternates'
     font-weight: 400
     font-size: 24px
 
-@mixin mixin-family-montserrat-hard 
+@mixin mixin-family-montserrat-hard
     font-family: 'Montserrat Alternates'
     font-weight: 800
     font-size: 32px
+
+// Homepage style
+
+@mixin mixin-homepage
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    height: $h-100
+    width: $w-100
+    border: $border-white
+    font-size: 34px
+    line-height: 24px
+    gap: 2rem
+
+@mixin mixin-div_title
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    height: 5rem
+    width: 100%
+
+@mixin mixin-title
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    font-family: 'Montserrat Alternates'
+    font-weight: 800
+    font-size: 32px
+    padding: 0.2rem
+    color: $color-black
+    height: $h-div-max
+    width: $w-div-small
+    filter: drop-shadow(5px 5px 10px rgb(0, 166, 255))
+
+@mixin mixin-carosello
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    height: $h-auto
+    max-height: 45rem
+    width: 100%
+
+@mixin mixin-carousel
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    justify-content: $j-center
+    align-items: $item-center
+    height: 30rem
+    width: 100%
+    border: 3px double blue
+    border-radius: 10px
+    background-color: $bg-white
+    color: rgb(0, 0, 0)
+    gap: 10px
+
+@mixin mixin-choose_img
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    justify-content: $j-center
+    align-items: $item-center
+    width: $w-100
+    height: 5rem
+    background-color: $border-black
+
+@mixin mixin-divImg
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    justify-content: $j-center
+    align-items: $item-center
+    height: 25rem
+    width: 25rem
+    background-color: transparent
+    background-repeat: no-repeat
+    background-position: center
+
+@mixin mixin-img
+    position: relative
+    display: flex
+    height: 100%
+    width: 100%
+    object-fit: scale-down
+    border: 1px solid black
+    border-radius: 10px
+    box-shadow: 2px 2px 15px rgb(0, 166, 255)
+
+@mixin mixin-ul
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    justify-content: $j-center
+    align-items: $item-center
+    height: $h-div-mid
+    width: $w-div-full
+    line-height: 30px
+    padding-left: 1.5rem
+    border: $border-black
+    overflow-y: auto
+    overflow-x: hidden
+
+@mixin mixin-main
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    height: $h-div-max
+    width: $w-div-max
+    border: $border-white
+
+@mixin mixin-navbar_main
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-cl
+    height: $h-auto
+    width: $w-100
+    justify-content: $j-center
+
+@mixin mixin-body_main
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    height: 30rem
+    width: 100%
+
+@mixin mixin-home_navbar 
+    position: relative
+    display: flex
+    height: 20%
+    width: 100%
+    background-color: $bg-white
+
+@mixin mixin-classNameNav 
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    height: 50px
+    width: 100%
+
+@mixin mixin-classNameDivBtn 
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    height: 3rem
+    width: 100%
+
+@mixin mixin-classNameBtn 
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    justify-content: $j-center
+    align-items: $item-center
+    height: 35px
+    min-width: 65px
+    max-width: 100px
+    background-color: rgb(10, 10, 200)
+    color: rgb(255, 255, 255)
+    border-radius: 15px
+    font-family: serif
+    font-size: 14px
+    font-weight: 400
+
+@mixin mixin-classNameBodyMain 
+    position: relative
+    display: $display-flex
+    flex-direction: $direction-rw
+    border-radius: 10px
+    background-color: transparent
+    color: $color-black
+    box-shadow: 0px 5px 15px rgb(0, 0, 0)
+    height: auto
+    min-height: 300px
+    width: 100%
+    padding: 5px
+    font-family: 'Montserrat', sans-serif
+    font-size: 14px
+    letter-spacing: 0.33px
+    font-weight: 400

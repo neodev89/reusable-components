@@ -14,7 +14,6 @@ import { navbarType } from '@/@types/navbarTypes';
 
 export default function Homepage() {
   const [dataNav, setDataNav] = useState<Array<navbarType>>([]);
-
   const [isHome, setIsHome] = useState<string>("page-1");
 
   const carouselImg: carouselType = {
