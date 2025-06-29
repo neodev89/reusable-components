@@ -1,0 +1,73 @@
+@use '../../sass/variables' as var
+@use '../../sass/mixins' as mix
+
+.classFooter
+    position: relative
+    display: var.$display-flex
+    flex-direction: var.$direction-rw
+    justify-content: space-evenly
+    height: var.$h-100
+    width: var.$w-100
+
+.classFooterContainer
+    @include mix.mixin-shadow-inset
+    
+    position: relative
+    display: var.$display-flex
+    flex-direction: var.$direction-rw
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    height: var.$h-100
+    min-height: 12rem
+    width: 22%
+    border-right: var.$border-blue
+    border-bottom: var.$border-blue
+    
+
+.classInfo
+    position: relative
+    display: var.$display-flex
+    flex-direction: var.$direction-cl
+    align-items: center
+    justify-content: var.$j-center
+    height: var.$h-100
+    width: var.$w-100
+
+.classFooterImg
+    position: relative
+    display: var.$display-flex
+    object-fit: scale-down
+    object-position: center
+    height: 60px
+    width: 60px
+    padding: 0
+    // border-radius: 50%
+    // border: 2px dashed rgb(251, 255, 0)
+
+.classImage
+    height: var.$h-100
+    width: var.$w-100
+    border-radius: 50%
+    background-color: var.$bg-white
+    z-index: 1
+
+.classFooterVal
+    position: relative
+    display: var.$display-flex
+    align-items: var.$item-center
+    // border: var.$border-black
+    width: 80%
+    min-height: 40px
+    & span
+        display: var.$display-block
+        text-align: center
+        text-shadow: var.$t-shadow-blue
+        filter: var.$filter-shadow
+        overflow-wrap: break-word
+        word-break: break-word
+        hyphens: auto
+        height: auto
+        width: var.$w-100
+        color: rgb(255, 255, 255)
+        font-size: 14px

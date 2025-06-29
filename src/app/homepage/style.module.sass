@@ -1,54 +1,61 @@
-@use '../../sass/variables' as variables
+@use '../../sass/mixins' as mixin
+@use '../../sass/variables' as var 
+
 .homepage
-    @include variables.mixin-homepage
+    @include mixin.mixin-homepage
     
 .div_title
-    @include variables.mixin-div_title
+    @include mixin.mixin-div_title
+    text-shadow: var.$t-shadow-multiple-RandB
+    color: rgb(255, 255, 255)
     
 .title
-    @include variables.mixin-title
+    @include mixin.mixin-title
 
 .carosello
-    @include variables.mixin-carosello
+    @include mixin.mixin-carosello
     
 .carousel
-    @include variables.mixin-carousel
+    @include mixin.mixin-carousel
+    box-shadow: var.$b-shadow-multiple-GandB
     
 .choose_img
-    @include variables.mixin-choose_img
+    @include mixin.mixin-choose_img
 
 .divImg
-    @include variables.mixin-divImg 
+    @include mixin.mixin-divImg 
+    &:hover
+        transform: scale(1.8)
 
 .img
-    @include variables.mixin-img
+    @include mixin.mixin-img
 
 .ul
-    @include variables.mixin-ul    
+    @include mixin.mixin-ul    
 
 .main
-    @include variables.mixin-main
+    @include mixin.mixin-main
 
 .navbar_main
-    @include variables.mixin-navbar_main
+    @include mixin.mixin-navbar_main
     
 .body_main
-    @include variables.mixin-body_main
+    @include mixin.mixin-body_main
 
 .home_navbar
-    @include variables.mixin-body_main
+    @include mixin.mixin-body_main
     
 .classNameNav
-    @include variables.mixin-classNameNav
+    @include mixin.mixin-classNameNav
     // border: 5px double black
 
 .classNameDivBtn
-    @include variables.mixin-classNameDivBtn   
-    // border: variables.$border-black
+    @include mixin.mixin-classNameDivBtn   
+    // border: mixin.$border-black
 
 .classNameBtn
-    @include variables.mixin-classNameBtn
+    @include mixin.mixin-classNameBtn
     
 .classNameBodyMain
-    @include variables.mixin-classNameBodyMain
+    @include mixin.mixin-classNameBodyMain
     

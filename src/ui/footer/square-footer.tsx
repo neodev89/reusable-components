@@ -1,32 +1,57 @@
-import { squareFooterType } from "@/@types/components";
+import { footerTypes } from "@/@types/components"
 
-export const SquareFooter = (
-    {
-        properties,
-        classDivPropertyFooter,
-        classImg,
-        classNamePropertyFooter,
-        classValuePropertyFooter,
-    }: squareFooterType
-) => {
+import React from "react"
+import Image from "next/image"
+import styles from './style.module.sass';
+import { footer } from "@/CONFIG/footer";
+import Link from "next/link";
 
+const Footer = () => {
+    const { data } = footer;
     return (
-        properties.map((prop) => {
-            <div className={classDivPropertyFooter}>
-                <div className={classNamePropertyFooter}>
-                    {prop.name}
-                </div>
-                {
-                    prop.pathImg ? (
-                        <div className={classImg}>
-                            {prop.pathImg}
-                        </div>
-                    ) : <></>
-                }
-                <div className={classValuePropertyFooter}>
-                    {prop.value}
-                </div>
-            </div>
-        })
+        <div className={styles.classFooter}>
+            <SquareFooter data={data} />
+        </div>
     )
-} 
+}
+
+const SquareFooter = ({
+    data
+}: footerTypes) => {
+    return (
+        <>
+            {
+                data.map((prop, index: number) => {
+                    return (
+                        <div key={`${index}`} className={styles.classFooterContainer}>
+                            <div className={styles.classInfo}>
+                                <div className={styles.classFooterImg}>
+                                    <Image
+                                        height={60}
+                                        width={60}
+                                        src={prop.src}
+                                        alt={`${prop.src}`}
+                                        unoptimized
+                                        className={styles.classImage}
+                                    />
+                                </div>
+                                <div className={styles.classFooterVal}>
+                                    <span>{prop.name}</span>
+                                </div>
+                                <div className={styles.classFooterVal}>
+                                    <span>
+                                        <Link href={prop.value}>{prop.value}</Link>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+        </>
+    )
+}
+
+export {
+    Footer
+}

@@ -19,7 +19,7 @@ export default function Homepage() {
   const carouselImg: carouselType = {
     img: [
       {
-        src: '/Codice1.jpeg',
+        src: '/reusable_components.png',
         alt: "Codice incorniciato",
         key: "Codice incorniciato",
         height: 100,

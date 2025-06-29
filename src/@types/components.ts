@@ -46,6 +46,16 @@ interface squareFooterType {
     properties: Array<propertyType>;
 }
 
+interface footerTypes {
+    data: Array<dataTypes>;
+}
+
+interface dataTypes {
+    name: string;
+    value: string;
+    src: string;
+}
+
 interface propertyType {
     name: string;
     value: string;
@@ -53,4 +63,12 @@ interface propertyType {
 }
 
 
-export type { carouselType, mainType, bodyMainType, divColType, squareFooterType };
+export type { 
+    carouselType, 
+    mainType, 
+    bodyMainType, 
+    divColType, 
+    squareFooterType,
+    footerTypes,
+    dataTypes
+};

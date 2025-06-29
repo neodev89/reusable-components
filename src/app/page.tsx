@@ -1,11 +1,8 @@
 'use client'
 import styles from "./page.module.css";
-import stylesDivCol from './page.module.sass';
 import Homepage from "./homepage/page";
 import Didattica from "./didattica/page";
 import Biografia from "./biografia/page";
-import DarkTriangle from '../../public/Disegno_blue_inverso_dark.svg';
-import DarkTriangle2 from '../../public/Disegno_blue_inverso2_dark.svg';
 
 import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";
@@ -13,7 +10,7 @@ import { Navbar } from "../ui/navbar/Navbar";
 
 import Head from "next/head";
 import navbar from '../dynamic_navbar/navbar.json';
-import { DivCol } from "@/ui/div_col/div_col";
+import { Footer } from "@/ui/footer/square-footer";
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("homepage");
@@ -47,28 +44,16 @@ export default function Home() {
             />
           </div>
           <div className={styles.dynamic_components}>
-            <DivCol
-              classNameDivCol={stylesDivCol.div_col}
-              classNameImgCol={stylesDivCol.img_col}
-              classNameTriangle={stylesDivCol.classNameTriangle}
-              Triangle={DarkTriangle}
-            />
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
               {flagPage === 'biografia' && <Biografia />}
               {flagPage === 'didattica' && <Didattica />}
               <div className={styles.footer}>
                 <div className={styles.internal_footer}>
-                  <p>Footer Footer Footer</p>
+                  <Footer />
                 </div>
               </div>
             </div>
-            <DivCol
-              Triangle={DarkTriangle2}
-              classNameDivCol={stylesDivCol.div_col}
-              classNameImgCol={stylesDivCol.img_col}
-              classNameTriangle={stylesDivCol.classNameTriangle}
-            />
           </div>
         </main>
       </div>
