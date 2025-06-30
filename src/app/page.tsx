@@ -1,16 +1,16 @@
 'use client'
 import styles from "./page.module.css";
 import Homepage from "./homepage/page";
-import Didattica from "./didattica/page";
-import Biografia from "./biografia/page";
+import Contatti from "./contatti/page";
+import AboutUs from "./about_us/page";
+import Head from "next/head";
+import navbar from '../dynamic_navbar/navbar.json';
 
 import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
-
-import Head from "next/head";
-import navbar from '../dynamic_navbar/navbar.json';
 import { Footer } from "@/ui/footer/square-footer";
+import { Progetti } from "./progetti/page";
 
 export default function Home() {
   const [flagPage, setFlagPage] = useState("homepage");
@@ -46,8 +46,9 @@ export default function Home() {
           <div className={styles.dynamic_components}>
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
-              {flagPage === 'biografia' && <Biografia />}
-              {flagPage === 'didattica' && <Didattica />}
+              {flagPage === 'about us' && <AboutUs />}
+              {flagPage === 'progetti' && <Progetti />}
+              {flagPage === 'contatti' && <Contatti />}
               <div className={styles.footer}>
                 <div className={styles.internal_footer}>
                   <Footer />

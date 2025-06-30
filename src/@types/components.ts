@@ -1,74 +1,103 @@
 import { ComponentType, ReactNode } from "react";
 
 interface carouselType {
-    img: Array<imgType>;
-    classNameCarousel: string;
-    classNameDivImg: string;
-    classNameImg: string;
-    classNameBtn: string;
-    classNameDivBtn: string;
+  img: Array<imgType>;
+  classNameCarousel: string;
+  classNameDivImg: string;
+  classNameImg: string;
+  classNameBtn: string;
+  classNameDivBtn: string;
 }
 
 interface imgType {
-    src: string;
-    alt: string;
-    key: string;
-    height: number;
-    width: number;
+  src: string;
+  alt: string;
+  key: string;
+  height: number;
+  width: number;
+}
+
+interface carouselVidType {
+  vid: Array<videoType>;
+  classNameDiv: string;
+  classNameVideo: string;
+  classNameDivBtn: string;
+  classNameBtn: string
+}
+
+interface videoType {
+  height: string;
+  width: string;
+  controls: boolean;
+  autoplay: boolean;
+  loop: boolean;
+  source: { src: string, type: string };
 }
 
 interface mainType {
-    classNameMain: string;
-    classNameNavbarMain: string;
-    classNameBodyMain: string;
-    children1: ReactNode;
-    children2: ReactNode;
+  classNameMain: string;
+  classNameNavbarMain: string;
+  classNameBodyMain: string;
+  children1: ReactNode;
+  children2: ReactNode;
 }
 
 interface bodyMainType {
-    classNameBodyMain: string;
-    state: string;
-    text: Array<{ id: string, page: ReactNode }>;
+  classNameBodyMain: string;
+  state: string;
+  text: Array<{ id: string; page: ReactNode }>;
 }
 
 interface divColType {
-    classNameDivCol: string;
-    classNameImgCol: string;
-    classNameTriangle: string;
-    Triangle: ComponentType<{ className: string }>;
+  classNameDivCol: string;
+  classNameImgCol: string;
+  classNameTriangle: string;
+  Triangle: ComponentType<{ className: string }>;
 }
 
 interface squareFooterType {
-    classDivPropertyFooter: string;
-    classNamePropertyFooter: string;
-    classImg?: string;
-    classValuePropertyFooter: string;
-    properties: Array<propertyType>;
+  classDivPropertyFooter: string;
+  classNamePropertyFooter: string;
+  classImg?: string;
+  classValuePropertyFooter: string;
+  properties: Array<propertyType>;
 }
 
 interface footerTypes {
-    data: Array<dataTypes>;
+  data: Array<dataTypes>;
 }
 
 interface dataTypes {
-    name: string;
-    value: string;
-    src: string;
+  name: string;
+  value: string;
+  src: string;
 }
 
 interface propertyType {
-    name: string;
-    value: string;
-    pathImg: string | null;
+  name: string;
+  value: string;
+  pathImg: string | null;
 }
 
+interface cardsType {
+  classCards: string;
+  classCard: string;
+  classImg: string;
+  img: imgType;
+  classDivButtons: string;
+  classButtons: string;
+  child: ReactNode;
+}
 
-export type { 
-    carouselType, 
-    mainType, 
-    bodyMainType, 
-    divColType, 
-    squareFooterType,
-    footerTypes,
-    dataTypes
+export type {
+  carouselType,
+  mainType,
+  bodyMainType,
+  divColType,
+  squareFooterType,
+  footerTypes,
+  dataTypes,
+  carouselVidType,
+  videoType,
+  cardsType,
 };
