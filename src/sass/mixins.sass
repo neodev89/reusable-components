@@ -23,7 +23,7 @@
     justify-content: space-around
     align-items: center
 
-@mixin mixin-evenly 
+@mixin mixin-evenly
     justify-content: space-evenly
     padding: 0.2rem
 
@@ -209,6 +209,11 @@
     font-size: 14px
     font-weight: 400
     cursor: pointer
+    transition: background-color 0.3s ease, transform 0.2s ease
+    &:hover
+        background-color: rgb(255, 221, 0)
+        transform: scale(1.05)
+        color: rgb(0, 0, 0)
 
 @mixin mixin-classNameBodyMain
     position: relative
@@ -230,3 +235,23 @@
 @mixin mixin-shadow-inset
     box-shadow: variables.$b-shadow-blue
     border-radius: 15px
+
+// Definizione animazione shake
+@keyframes tilt-shake
+    0%
+        transform: rotate(0deg)
+    20%
+        transform: rotate(8deg)
+    40%
+        transform: rotate(-8deg)
+    60%
+        transform: rotate(6deg)
+    80%
+        transform: rotate(-6deg)
+    100%
+        transform: rotate(0deg)
+
+// Mixin riutilizzabile
+@mixin shake-on-hover($duration: 0.2s)
+    &:hover
+        animation: tilt-shake $duration linear

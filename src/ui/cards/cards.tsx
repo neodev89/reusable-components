@@ -36,8 +36,8 @@ const Cards = ({
                                     <Image 
                                         height={30} 
                                         width={30} 
-                                        src="/like.jpeg" 
-                                        alt="like-button" 
+                                        src="/like-svg.png" 
+                                        alt="like-png-button" 
                                     />
                                 </button>
                                 <button
@@ -45,7 +45,14 @@ const Cards = ({
                                     name="dislike"
                                     className={card.classButtons}
                                     onClick={() => setIsDislike(isDislike)}
-                                ></button>
+                                >
+                                    <Image
+                                        height={30}
+                                        width={30}
+                                        src={"/dislike-svg.png"}
+                                        alt="dislike-png-button"
+                                    />
+                                </button>
                             </div>
                         </div>
                     )

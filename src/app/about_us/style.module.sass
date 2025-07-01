@@ -8,21 +8,32 @@
 
 .cards
     @include mix.mixin-display-rw
+    flex-wrap: wrap
+    justify-content: var.$j-evenly
     height: var.$h-100
     width: var.$w-100
+    border: var.$border-blue
 
 .classCards
     @include mix.mixin-display-cl
     @include mix.mixin-family-montserrat-hard
-    height: var.$h-100
-    width: var.$w-100
+    align-items: var.$item-center
+    height: 18rem
+    width: 15rem
     border: var.$border-black
+    padding: 0.5rem
+    &:nth-child(odd)
+        border-radius: 20px 10px
+    &:nth-child(even)
+        border-radius: 10px 20px
 
 .classCard
     @include mix.mixin-display-rw
-    height: 50%
-    width: 95%
+    height: 70%
+    width: var.$w-100
     border: var.$border-red
+    border-radius: 15px
+           
 
 .classImg
     object-fit: scale-down
@@ -32,9 +43,13 @@
 
 .classDivButtons
     @include mix.mixin-display-rw
-    height: 50%
-    width: 95%
+    justify-content: space-around
+    height: 30%
+    width: var.$w-100
     border: var.$border-blue
 
 .classButtons
     @include mix.mixin-classNameBtn
+    &:hover
+        @include mix.shake-on-hover($duration: 0.2s)
+        
