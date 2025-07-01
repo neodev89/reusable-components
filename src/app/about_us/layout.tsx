@@ -7,7 +7,7 @@ export default function LayoutAboutUs(
             children: Readonly<React.ReactNode>
         }) {
     return (
-        <div className={styles.biografia}>
+        <div className={styles.about_us}>
             {children}
         </div>
     )

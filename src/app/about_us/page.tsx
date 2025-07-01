@@ -54,7 +54,6 @@ export default function AboutUs() {
   }
   return (
     <LayoutAboutUs>
-      <div>About Us</div>
       <div className={styles.cards}>
         <Cards {...cardsObj} />
       </div>

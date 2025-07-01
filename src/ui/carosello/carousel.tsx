@@ -29,8 +29,19 @@ export const Carousel = ({
                 />
             </div>
             <div className={classNameDivBtn}>
-                <button type="button" className={classNameBtn} onClick={prevImage}>&lt;</button>
-                <button type="button" className={classNameBtn} onClick={nextImage}>&gt;</button>
+                <button
+                    type="button"
+                    className={classNameBtn}
+                    onClick={prevImage}
+                >
+                    &lt;
+                </button>
+                <button
+                    type="button"
+                    className={classNameBtn}
+                    onClick={nextImage}>
+                    &gt;
+                </button>
             </div>
         </div>
     )
