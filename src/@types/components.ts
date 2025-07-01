@@ -5,8 +5,8 @@ interface carouselType {
   classNameCarousel: string;
   classNameDivImg: string;
   classNameImg: string;
-  classNameBtn: string;
   classNameDivBtn: string;
+  classNameBtn: string;
 }
 
 interface imgType {
@@ -79,14 +79,17 @@ interface propertyType {
   pathImg: string | null;
 }
 
+interface cardsArrayType {
+  cards: Array<cardsType>;
+}
+
 interface cardsType {
   classCards: string;
   classCard: string;
   classImg: string;
-  img: imgType;
   classDivButtons: string;
   classButtons: string;
-  child: ReactNode;
+  img: imgType;
 }
 
 export type {
@@ -100,4 +103,5 @@ export type {
   carouselVidType,
   videoType,
   cardsType,
+  cardsArrayType,
 };

@@ -6,10 +6,12 @@
     background-color: $bg
 
 @mixin mixin-display-cl
+    position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-cl
 
 @mixin mixin-display-rw
+    position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw
 
@@ -20,6 +22,10 @@
 @mixin mixin-space-around
     justify-content: space-around
     align-items: center
+
+@mixin mixin-evenly 
+    justify-content: space-evenly
+    padding: 0.2rem
 
 @mixin mixin-family-montserrat-light
     font-family: 'Montserrat Alternates'
@@ -122,8 +128,8 @@
     border-radius: 10px
     box-shadow: 2px 2px 15px rgb(0, 166, 255)
     &:hover
-        box-shadow: 0 0 0 rgb(255, 255, 255) 
-        border: 0.1px solid transparent 
+        box-shadow: 0 0 0 rgb(255, 255, 255)
+        border: 0.1px solid transparent
 
 @mixin mixin-ul
     position: relative
@@ -162,14 +168,14 @@
     height: 30rem
     width: 100%
 
-@mixin mixin-home_navbar 
+@mixin mixin-home_navbar
     position: relative
     display: flex
     height: 20%
     width: 100%
     background-color: variables.$bg-white
 
-@mixin mixin-classNameNav 
+@mixin mixin-classNameNav
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw
@@ -178,7 +184,7 @@
     height: 50px
     width: 100%
 
-@mixin mixin-classNameDivBtn 
+@mixin mixin-classNameDivBtn
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw
@@ -187,7 +193,7 @@
     height: 3rem
     width: 100%
 
-@mixin mixin-classNameBtn 
+@mixin mixin-classNameBtn
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw
@@ -202,8 +208,9 @@
     font-family: serif
     font-size: 14px
     font-weight: 400
+    cursor: pointer
 
-@mixin mixin-classNameBodyMain 
+@mixin mixin-classNameBodyMain
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw

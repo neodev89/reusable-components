@@ -1,3 +1,40 @@
+@use '../../sass/mixins' as mix
+@use '../../sass/variables' as var
+
 .biografia
-    font-size: 34px
-    line-height: 24px
+    @include mix.mixin-display-rw
+    height: var.$h-100
+    width: var.$w-100
+
+.cards
+    @include mix.mixin-display-rw
+    height: var.$h-100
+    width: var.$w-100
+
+.classCards
+    @include mix.mixin-display-cl
+    @include mix.mixin-family-montserrat-hard
+    height: var.$h-100
+    width: var.$w-100
+    border: var.$border-black
+
+.classCard
+    @include mix.mixin-display-rw
+    height: 50%
+    width: 95%
+    border: var.$border-red
+
+.classImg
+    object-fit: scale-down
+    object-position: center
+    height: var.$h-100
+    width: var.$w-100
+
+.classDivButtons
+    @include mix.mixin-display-rw
+    height: 50%
+    width: 95%
+    border: var.$border-blue
+
+.classButtons
+    @include mix.mixin-classNameBtn
