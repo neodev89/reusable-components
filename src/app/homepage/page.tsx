@@ -10,11 +10,15 @@ import { SecondNavbar } from '@/ui/navbar/Navbar';
 import { useEffect, useState } from 'react';
 import { BodyMain } from '@/ui/main/bodyMain';
 import { navbarType } from '@/@types/navbarTypes';
+import { fetchData } from '@/pages/fetches/fetch';
+import Error from 'next/error';
 
 
 export default function Homepage() {
-  const [dataNav, setDataNav] = useState<Array<navbarType>>([]);
+  const [data, setData] = useState<Array<navbarType>>([]);
   const [isHome, setIsHome] = useState<string>("page-1");
+  const [error, setError] = useState<Error | undefined>(undefined);
+  const [statusRes, setStatusRes] = useState<string>("");
 
   const carouselImg: carouselType = {
     img: [
@@ -56,26 +60,7 @@ export default function Homepage() {
 
   useEffect(() => {
     console.log("Ecco lo stato:", isHome);
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/take-data", {
-          headers: {
-            "Content-Type": "application/json"
-          }
-        });
-
-        if (!res.ok) {
-          console.error("Errore nel recupero dati dalla API")
-        }
-
-        const dati: Array<navbarType> = await res.json();
-        console.log(dati);
-        setDataNav(dati);
-      } catch (error) {
-        console.error("Errore nel try-catch: ", error);
-      }
-    }
-    fetchData();
+    fetchData("/api/take-data", setError, setStatusRes, setData);
   }, [isHome]);
 
   return (
@@ -94,7 +79,7 @@ export default function Homepage() {
         classNameBodyMain={styles.body_main}
         children1={
           <SecondNavbar
-            navbar={dataNav}
+            navbar={data}
             classNameNavbar={styles.classNameNav}
             classNameButtons={styles.classNameBtn}
             setValue={setIsHome}
@@ -104,7 +89,7 @@ export default function Homepage() {
           <BodyMain
             classNameBodyMain={styles.classNameBodyMain}
             state={isHome}
-            text={dataNav}
+            text={data}
           />
         }
       />
