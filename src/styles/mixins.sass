@@ -149,7 +149,7 @@
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-cl
-    height: 20rem
+    height: 18rem
     width: variables.$w-div-max
     border: variables.$border-white
 
@@ -157,7 +157,7 @@
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-cl
-    height: variables.$h-auto
+    height: 5rem
     width: variables.$w-100
     justify-content: variables.$j-center
 
@@ -165,7 +165,7 @@
     position: relative
     display: variables.$display-flex
     flex-direction: variables.$direction-rw
-    height: 30rem
+    height: 10rem
     width: 100%
 
 @mixin mixin-home_navbar
@@ -200,8 +200,8 @@
     justify-content: variables.$j-center
     align-items: variables.$item-center
     height: 35px
-    min-width: 65px
-    max-width: 100px
+    width: 6rem
+    max-width: 10rem
     background-color: rgb(10, 10, 200)
     color: rgb(255, 255, 255)
     border-radius: 15px
@@ -224,7 +224,7 @@
     background-color: transparent
     color: variables.$color-black
     box-shadow: 0px 5px 15px rgb(0, 0, 0)
-    height: 10rem
+    height: auto
     max-height: 200px
     width: 100%
     padding: 5px
@@ -232,6 +232,16 @@
     font-size: 14px
     letter-spacing: 0.33px
     font-weight: 400
+
+@mixin mixin-classNameText
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: 100%
+    border: 2px solid rgb(255, 0, 0)
+    
 
 @mixin mixin-shadow-inset
     box-shadow: variables.$b-shadow-blue

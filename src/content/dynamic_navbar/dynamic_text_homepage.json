@@ -1,0 +1,20 @@
+{
+    "dynamic_homepage": [
+        {
+            "id": "inizio",
+            "page": "Il mio percorso ha avuto inizio nell'ottobre 2021 quando, nel mentre lavoravo presso un commercialista, intrapresi il percorso di base nel quale studiai HTML, CSS e JavaScript"
+        },
+        {
+            "id": "tecnologie",
+            "page": "Sin da subito ho avuto parecchie problematiche con il linguaggio JavaScript. Ma si sa che ciò che si disprezza si compra. Fu da quell'odio che nacque un grande amore che mi condusse a lavorare con le grandi tecnologie derivate da JS: React.js, Next.js, Node.js"
+        },
+        {
+            "id": "esperienza",
+            "page": "Le esperienze vissute tra fine 2023 e fine 2024 mi hanno permesso di acquisire reali competenze sia professionali che di collaborazione tra professionisti del settore. Tra queste tengo a sottolineare:"
+        },
+        {
+            "id": "servizi",
+            "page": ""
+        }
+    ]
+}

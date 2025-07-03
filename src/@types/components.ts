@@ -44,8 +44,10 @@ interface mainType {
 
 interface bodyMainType {
   classNameBodyMain: string;
+  classNameText: string;
   state: string;
   text: Array<{ id: string; page: ReactNode }>;
+  experience: Array<{ id: string; impresa: string; value: string }>;
 }
 
 interface divColType {

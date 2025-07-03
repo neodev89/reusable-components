@@ -11,6 +11,7 @@ export default async function handlerTakeData(
     const filePath = path.join(
       process.cwd(),
       "src",
+      "content",
       "dynamic_navbar",
       "dynamic_text_homepage.json"
     );

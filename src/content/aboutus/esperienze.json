@@ -1,0 +1,19 @@
+{
+    "esperienze": [
+        {
+            "id": "1",
+            "impresa": "Foro start-up",
+            "value": "Ciao"
+        },
+        {
+            "id": "2",
+            "impresa": "My Goo-fun di CGM Consulting",
+            "value": "Come"
+        },
+        {
+            "id": "3",
+            "impresa": "Freelancer",
+            "value": "Stai"
+        }
+    ]
+}

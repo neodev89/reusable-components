@@ -4,7 +4,7 @@ import Homepage from "./homepage/page";
 import Contatti from "./contatti/page";
 import AboutUs from "./about_us/page";
 import Head from "next/head";
-import navbar from '../dynamic_navbar/navbar.json';
+import navbar from '../content/dynamic_navbar/navbar.json';
 
 import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";

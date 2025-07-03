@@ -1,6 +1,8 @@
 'use client'
 import styles from './style.module.sass'
 import LayoutHomepage from "./layout";
+import Error from 'next/error';
+import experience from '../../content/aboutus/esperienze.json';
 
 import { Title } from '@/ui/Title';
 import { carouselType } from '@/@types/components';
@@ -11,12 +13,11 @@ import { useEffect, useState } from 'react';
 import { BodyMain } from '@/ui/main/bodyMain';
 import { navbarType } from '@/@types/navbarTypes';
 import { fetchData } from '@/pages/fetches/fetch';
-import Error from 'next/error';
 
 
 export default function Homepage() {
   const [data, setData] = useState<Array<navbarType>>([]);
-  const [isHome, setIsHome] = useState<string>("page-1");
+  const [isHome, setIsHome] = useState<string>("inizio");
   const [error, setError] = useState<Error | undefined>(undefined);
   const [statusRes, setStatusRes] = useState<string>("");
 
@@ -88,8 +89,10 @@ export default function Homepage() {
         children2={
           <BodyMain
             classNameBodyMain={styles.classNameBodyMain}
+            classNameText={styles.classNameText}
             state={isHome}
             text={data}
+            experience={experience.esperienze}
           />
         }
       />
