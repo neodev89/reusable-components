@@ -1,6 +1,5 @@
 'use client'
 import styles from './style.module.sass'
-import LayoutHomepage from "./layout";
 import Error from 'next/error';
 import experience from '../../content/aboutus/esperienze.json';
 
@@ -20,6 +19,7 @@ export default function Homepage() {
   const [isHome, setIsHome] = useState<string>("inizio");
   const [error, setError] = useState<Error | undefined>(undefined);
   const [statusRes, setStatusRes] = useState<string>("");
+  const [focusButtons, setFocusButtons] = useState<boolean>(false);
 
   const carouselImg: carouselType = {
     img: [
@@ -65,7 +65,7 @@ export default function Homepage() {
   }, [isHome]);
 
   return (
-    <LayoutHomepage>
+    <>
       <div className={styles.div_title}>
         <Title className={styles.title}>
           Sito Internet
@@ -83,19 +83,20 @@ export default function Homepage() {
             navbar={data}
             classNameNavbar={styles.classNameNav}
             classNameButtons={styles.classNameBtn}
-            setValue={setIsHome}
+            setValue={setIsHome}        
           />
         }
         children2={
           <BodyMain
             classNameBodyMain={styles.classNameBodyMain}
             classNameText={styles.classNameText}
+            classList={styles.classList}
             state={isHome}
             text={data}
             experience={experience.esperienze}
           />
         }
       />
-    </LayoutHomepage>
+    </>
   );
 }

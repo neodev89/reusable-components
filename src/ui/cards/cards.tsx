@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
-import { cardsArrayType, cardsType } from "@/@types/components"
+import { cardsType } from "@/@types/components"
 
 import Image from "next/image"
 
 const Cards = ({
-    cards
-}: cardsArrayType) => {
+    classCards, classCard, classImg, classDivButtons, 
+    classButtons, img
+}: cardsType) => {
 
     const [isLike, setIsLike] = useState(false);
     const [isDislike, setIsDislike] = useState(false);
@@ -14,23 +15,23 @@ const Cards = ({
     return (
         <>
             {
-                cards.map((card, index: number) => {
+                img.map((image, index: number) => {
                     return (
-                        <div key={`${index}`} className={card.classCards}>
-                            <div className={card.classCard}>
+                        <div key={`${index}`} className={classCards}>
+                            <div className={classCard}>
                                 <Image 
-                                    className={card.classImg} 
-                                    height={card.img.height} 
-                                    width={card.img.width} 
-                                    src={card.img.src} 
-                                    alt={card.img.alt} 
+                                    className={classImg} 
+                                    height={image.height} 
+                                    width={image.width} 
+                                    src={image.src} 
+                                    alt={image.alt} 
                                 />
                             </div>
-                            <div className={card.classDivButtons}>
+                            <div className={classDivButtons}>
                                 <button
                                     type="button"
                                     name="like"
-                                    className={card.classButtons}
+                                    className={classButtons}
                                     onClick={() => setIsLike(isLike)}
                                 >
                                     <Image 
@@ -43,7 +44,7 @@ const Cards = ({
                                 <button
                                     type="button"
                                     name="dislike"
-                                    className={card.classButtons}
+                                    className={classButtons}
                                     onClick={() => setIsDislike(isDislike)}
                                 >
                                     <Image

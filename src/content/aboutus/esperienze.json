@@ -3,17 +3,17 @@
         {
             "id": "1",
             "impresa": "Foro start-up",
-            "value": "Ciao"
+            "value": "Implementazione interfacce e moduli per la realizzazione di un CRM"
         },
         {
             "id": "2",
             "impresa": "My Goo-fun di CGM Consulting",
-            "value": "Come"
+            "value": "Realizzazione di moduli e tabelle con componenti reattivi"
         },
         {
             "id": "3",
             "impresa": "Freelancer",
-            "value": "Stai"
+            "value": "Realizzazione siti vetrina, web app e e-commerce per micro e piccole imprese"
         }
     ]
 }

@@ -6,6 +6,18 @@ export const Navbar = ({
     classNameNavbar,
     classNameButtons,
 }: navbarJsonType) => {
+
+    // const handleId = () => {
+    //     const matched = navbar.find(el => el.id)
+    //     if (isTrue && matched) {
+    //         setValue(matched.id);
+    //         setIsTrue(true);
+    //     } else {
+    //         setValue("");
+    //         setIsTrue(false);
+    //     }
+    // }
+
     return (
         <nav className={classNameNavbar}>
             {

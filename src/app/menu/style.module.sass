@@ -1,26 +1,26 @@
 @use '../../styles/mixins' as mix
 @use '../../styles/variables' as var
 
-.about_us
+.menu 
     @include mix.mixin-display-rw
-    justify-content: var.$j-center
-    height: var.$h-100
+    height: 100vh
     width: var.$w-100
+    border: var.$border-black
 
-.cards
+.cardsMenu
     @include mix.mixin-display-rw
-    flex-wrap: wrap
+    flex-wrap: wrap 
     justify-content: var.$j-evenly
-    height: var.$h-100
-    width: var.$w-100
-    border: var.$border-blue
+    height: 80%
+    padding: 1.5rem
+    border: var.$border-red
 
 .classCards
     @include mix.mixin-display-cl
     @include mix.mixin-family-montserrat-hard
     align-items: var.$item-center
-    height: 18rem
-    width: 15rem
+    height: 12rem
+    width: 12rem
     border: var.$border-black
     padding: 0.5rem
     &:nth-child(odd)

@@ -14,13 +14,13 @@ export const BodyMain = ({
                             </p>
                             <div className={classList}>
                                 {
-                                    el.id === "esperienza" && (
+                                    el.id === "esperienza" ? (
                                         <ul>
                                             {
                                                 experience.map((exp) => {
                                                     return (
                                                         <>
-                                                            <li key={exp.id}>{exp.impresa}
+                                                            <li key={exp.id}>{`${exp.impresa}:`}
                                                                 <ul>
                                                                     <li>{exp.value}</li>
                                                                 </ul>
@@ -30,6 +30,8 @@ export const BodyMain = ({
                                                 })
                                             }
                                         </ul>
+                                    ) : (
+                                        <></>
                                     )
                                 }
                             </div>

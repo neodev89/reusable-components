@@ -41,7 +41,7 @@
 }
 
 .classNameBtn {
-  position: relative1;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,6 +50,44 @@
   width: 6rem;
   color: rgb(10, 10, 200);
   background-color: rgb(255, 255, 255);
+  box-shadow: -0.1rem 0.2rem 0.5rem rgb(171, 171, 171);
+  border: 0.1px solid transparent;
+  border-radius: 15px;
+  font-family: serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.classNameBtnFocus {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 6rem;
+  background-color: rgb(10, 10, 200);
+  color: white;
+  box-shadow: -0.1rem 0.2rem 0.5rem rgb(171, 171, 171);
+  border: 0.1px solid transparent;
+  border-radius: 15px;
+  font-family: serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.classFocusButtons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 6rem;
+  background-color: rgb(10, 10, 200);
+  color: white;
   box-shadow: -0.1rem 0.2rem 0.5rem rgb(171, 171, 171);
   border: 0.1px solid transparent;
   border-radius: 15px;

@@ -45,6 +45,7 @@ interface mainType {
 interface bodyMainType {
   classNameBodyMain: string;
   classNameText: string;
+  classList: string;
   state: string;
   text: Array<{ id: string; page: ReactNode }>;
   experience: Array<{ id: string; impresa: string; value: string }>;
@@ -81,17 +82,13 @@ interface propertyType {
   pathImg: string | null;
 }
 
-interface cardsArrayType {
-  cards: Array<cardsType>;
-}
-
 interface cardsType {
   classCards: string;
   classCard: string;
   classImg: string;
   classDivButtons: string;
   classButtons: string;
-  img: imgType;
+  img: Array<imgType>;
 }
 
 export type {
@@ -105,5 +102,4 @@ export type {
   carouselVidType,
   videoType,
   cardsType,
-  cardsArrayType,
 };

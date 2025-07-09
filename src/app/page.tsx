@@ -11,10 +11,12 @@ import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
 import { Footer } from "@/ui/footer/square-footer";
 import { Progetti } from "./progetti/page";
+import { Menu } from "./menu/page";
 
 export default function Home() {
-  const [flagPage, setFlagPage] = useState("homepage");
   const data = navbar.navbar;
+  const [flagPage, setFlagPage] = useState("homepage");
+  const [isTrue, setIsTrue] = useState<boolean>(false);
 
   const setValuePage = useCallback((val: string) => {
     setFlagPage(val);
@@ -22,7 +24,8 @@ export default function Home() {
 
   useEffect(() => {
     console.log(flagPage);
-  }, [flagPage]);
+    console.log("È vero che isTrue è ", isTrue)
+  }, [flagPage, isTrue]);
 
   return (
     <NextContext.Provider value={
@@ -30,7 +33,7 @@ export default function Home() {
     }>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </Head>
       <div className={styles.page}>
@@ -40,8 +43,8 @@ export default function Home() {
               navbar={data}
               classNameNavbar={styles.navbar}
               classNameButtons={styles.classNameBtn}
-              setValue={setValuePage}
-            />
+              setValue={setValuePage} 
+              />
           </div>
           <div className={styles.dynamic_components}>
             <div className={styles.divCenter}>
@@ -49,6 +52,7 @@ export default function Home() {
               {flagPage === 'about us' && <AboutUs />}
               {flagPage === 'progetti' && <Progetti />}
               {flagPage === 'contatti' && <Contatti />}
+              {flagPage === 'menu' && <Menu />}
               <div className={styles.footer}>
                 <div className={styles.internal_footer}>
                   <Footer />
