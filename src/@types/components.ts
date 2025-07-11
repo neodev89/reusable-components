@@ -102,4 +102,5 @@ export type {
   carouselVidType,
   videoType,
   cardsType,
+  imgType
 };

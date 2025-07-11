@@ -25,6 +25,8 @@ const Cards = ({
                                     width={image.width} 
                                     src={image.src} 
                                     alt={image.alt} 
+                                    unoptimized
+                                    priority={true}
                                 />
                             </div>
                             <div className={classDivButtons}>

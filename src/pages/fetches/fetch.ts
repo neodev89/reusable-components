@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export const fetchData = async<T> (
     data: string,
-    setError: Dispatch<SetStateAction<Error |undefined>>,
+    setError: Dispatch<SetStateAction<any>>,
     setStatusRes: Dispatch<SetStateAction<string>>,
     setData: Dispatch<SetStateAction<T>>
 ) => {
@@ -18,8 +18,8 @@ export const fetchData = async<T> (
             setStatusRes(`${res.statusText}`);
         }
 
-        const jsonData = await res.json();
-        setData(jsonData);
+        const finalData = await res.json();
+        setData(finalData);
 
     } catch (error) {
         setError(error as Error)
