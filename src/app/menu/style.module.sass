@@ -1,16 +1,16 @@
 @use '../../styles/mixins' as mix
 @use '../../styles/variables' as var
 
-.menu 
+.menu
     @include mix.mixin-display-rw
     justify-content: var.$j-center
-    height: 100vh
+    height: 70rem
     width: var.$w-100
-    border: var.$border-black
+    border: 3px dotted black
 
 .cardsMenu
     @include mix.mixin-display-rw
-    flex-wrap: wrap 
+    flex-wrap: wrap
     justify-content: var.$j-between
     height: 100%
     width: 95%
@@ -20,8 +20,9 @@
 .classCards
     @include mix.mixin-display-cl
     @include mix.mixin-family-montserrat-hard
+    justify-content: space-around
     align-items: var.$item-center
-    height: 18rem
+    height: 25rem
     width: 12rem
     border: var.$border-black
     padding: 0.5rem
@@ -32,11 +33,11 @@
 
 .classCard
     @include mix.mixin-display-rw
-    height: 70%
+    height: 50%
     width: var.$w-100
     border: var.$border-red
     border-radius: 15px
-    padding: 0.3rem           
+    padding: 0.3rem
 
 .classImg
     object-fit: cover
@@ -49,7 +50,7 @@
     @include mix.mixin-display-rw
     justify-content: space-around
     align-items: var.$item-center
-    height: 30%
+    height: 15%
     width: var.$w-100
     border: var.$border-blue
 
@@ -57,5 +58,11 @@
     @include mix.mixin-classNameBtn
     &:hover
         @include mix.shake-on-hover($duration: 0.2s)
-        
-        
+
+.classText
+    @include mix.mixin-display-rw
+    height: 35%
+    width: var.$w-100
+    & p
+        color: rgb(0, 0, 0)
+        font-size: 14px

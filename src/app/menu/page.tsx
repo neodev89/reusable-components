@@ -9,6 +9,7 @@ import { takeImagesCards } from '../actions/takeCards';
 
 export const Menu = () => {
     const [data, setData] = useState<imgType[]>([]);
+    const [cardText, setCardText] = useState<string>("")
     // const [error, setError] = useState<Error | any>(undefined);
     // const [statusRes, setStatusRes] = useState<string>("");
 
@@ -19,10 +20,15 @@ export const Menu = () => {
     useEffect(() => {
         const fetchImages = async () => {
             const data = await takeImagesCards();
-            setData(data);
+            if (data) {
+                const { img } = data;
+                setData(img);
+            }
+            return null;
         }
         fetchImages();
-    }, []);
+        console.log(cardText);
+    }, [cardText]);
 
     const cards: cardsType = {
         classCards: styles.classCards,
@@ -30,6 +36,7 @@ export const Menu = () => {
         classImg: styles.classImg,
         classDivButtons: styles.classDivButtons,
         classButtons: styles.classButtons,
+        classText: styles.classText,
         img: data
     };
 

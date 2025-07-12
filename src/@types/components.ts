@@ -1,5 +1,13 @@
 import { ComponentType, ReactNode } from "react";
 
+interface imgType {
+  src: string;
+  alt: string;
+  height: number;
+  width: number;
+  text: string;
+}
+
 interface carouselType {
   img: Array<imgType>;
   classNameCarousel: string;
@@ -9,13 +17,17 @@ interface carouselType {
   classNameBtn: string;
 }
 
-interface imgType {
-  src: string;
-  alt: string;
-  key: string;
-  height: number;
-  width: number;
+interface cardsType {
+  classCards: string;
+  classCard: string;
+  classImg: string;
+  classDivButtons: string;
+  classButtons: string;
+  classText: string;
+  img: Array<imgType>;
 }
+
+type ImageObjType = Pick<cardsType, "img">;
 
 interface carouselVidType {
   vid: Array<videoType>;
@@ -82,15 +94,6 @@ interface propertyType {
   pathImg: string | null;
 }
 
-interface cardsType {
-  classCards: string;
-  classCard: string;
-  classImg: string;
-  classDivButtons: string;
-  classButtons: string;
-  img: Array<imgType>;
-}
-
 export type {
   carouselType,
   mainType,
@@ -102,5 +105,6 @@ export type {
   carouselVidType,
   videoType,
   cardsType,
-  imgType
+  imgType,
+  ImageObjType
 };

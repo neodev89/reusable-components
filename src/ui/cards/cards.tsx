@@ -1,11 +1,11 @@
-import { cardsType } from "@/@types/components"
-
 import Image from "next/image"
+
+import { cardsType } from "@/@types/components"
 import { Buttons } from "./button-cards";
 
 const Cards = ({
     classCards, classCard, classImg, classDivButtons,
-    classButtons, img
+    classButtons, classText, text, img
 }: cardsType) => {
 
     return (
@@ -24,6 +24,9 @@ const Cards = ({
                                     unoptimized
                                     priority={true}
                                 />
+                            </div>
+                            <div className={classText}>
+                                <p>{image.text}</p>
                             </div>
                             <div className={classDivButtons}>
                                 <Buttons classButtons={classButtons} />

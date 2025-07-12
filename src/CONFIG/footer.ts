@@ -1,4 +1,3 @@
-"use client"
 import { footerTypes } from "@/@types/components";
 
 export const footer: footerTypes = {

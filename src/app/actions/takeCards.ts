@@ -1,9 +1,9 @@
 "use server"
 import fs from 'fs/promises';
 import path from 'path';
-import { imgType } from '@/@types/components';
+import { ImageObjType, imgType } from '@/@types/components';
 
-export const takeImagesCards = async (): Promise<imgType[]> => {
+export const takeImagesCards = async (): Promise<ImageObjType | null> => {
     try {
         const filePath = path.join(
             process.cwd(),
@@ -14,22 +14,28 @@ export const takeImagesCards = async (): Promise<imgType[]> => {
         );
 
         const content = await fs.readFile(filePath, 'utf-8');
-        const data = JSON.parse(content);
+        const data: ImageObjType = JSON.parse(content);
 
         if (!data || (Array.isArray(data) && data.length === 0)) {
             console.error('Il file è vuoto o non contiene dati validi.');
         }
 
-        const enriched: imgType[] = data.img.map((el: imgType) => ({
+        const enriched = data.img.map((el) => ({
             ...el,
-            height: 15,
-            width: 15,
-        }));
+            height: 15, 
+            width: 15
+        }))
 
-        return enriched;
+        const newObjData = {
+            img: enriched
+        }
+
+        console.log("The new object is: ", newObjData);
+
+        return newObjData;
     } catch (error) {
         console.error('Errore nel takeCards:', error);
-        return [];
+        return null;
     }
 }
 

@@ -1,6 +1,6 @@
 'use client'
 import styles from './style.module.sass'
-import Error from 'next/error';
+// import Error from 'next/error';
 import experience from '../../content/aboutus/esperienze.json';
 
 import { Title } from '@/ui/Title';
