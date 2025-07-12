@@ -2,17 +2,26 @@
 import styles from './style.module.sass';
 
 import { cardsType, imgType } from '@/@types/components';
-import { fetchData } from '@/pages/fetches/fetch';
+// import { fetchData } from '@/pages/fetches/fetch';
 import { Cards } from '@/ui/cards/cards';
 import { useEffect, useState } from 'react';
+import { takeImagesCards } from '../actions/takeCards';
 
 export const Menu = () => {
     const [data, setData] = useState<imgType[]>([]);
-    const [error, setError] = useState<Error | any>(undefined);
-    const [statusRes, setStatusRes] = useState<string>("");
+    // const [error, setError] = useState<Error | any>(undefined);
+    // const [statusRes, setStatusRes] = useState<string>("");
+
+    // useEffect(() => {
+    //     fetchData("/api/take-cards", setError, setStatusRes, setData);
+    // }, []);
 
     useEffect(() => {
-        fetchData("/api/take-cards", setError, setStatusRes, setData);
+        const fetchImages = async () => {
+            const data = await takeImagesCards();
+            setData(data);
+        }
+        fetchImages();
     }, []);
 
     const cards: cardsType = {
@@ -28,9 +37,6 @@ export const Menu = () => {
         <div className={styles.menu}>
             <div className={styles.cardsMenu}>
                 <Cards {...cards} />
-            </div>
-            <div className={styles.cardsInfo}>
-
             </div>
         </div>
     )

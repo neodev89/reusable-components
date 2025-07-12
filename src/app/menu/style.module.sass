@@ -11,8 +11,8 @@
 .cardsMenu
     @include mix.mixin-display-rw
     flex-wrap: wrap 
-    justify-content: var.$j-evenly
-    height: 80%
+    justify-content: var.$j-between
+    height: 100%
     width: 95%
     padding: 1.5rem
     border: var.$border-red
@@ -21,7 +21,7 @@
     @include mix.mixin-display-cl
     @include mix.mixin-family-montserrat-hard
     align-items: var.$item-center
-    height: 12rem
+    height: 18rem
     width: 12rem
     border: var.$border-black
     padding: 0.5rem
@@ -36,17 +36,19 @@
     width: var.$w-100
     border: var.$border-red
     border-radius: 15px
-           
+    padding: 0.3rem           
 
 .classImg
-    object-fit: scale-down
+    object-fit: cover
     object-position: center
+    border-radius: 15px
     height: var.$h-100
     width: var.$w-100
 
 .classDivButtons
     @include mix.mixin-display-rw
     justify-content: space-around
+    align-items: var.$item-center
     height: 30%
     width: var.$w-100
     border: var.$border-blue
