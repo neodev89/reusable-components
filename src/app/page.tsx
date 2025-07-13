@@ -17,15 +17,11 @@ export default function Home() {
   const data = navbar.navbar;
   const [flagPage, setFlagPage] = useState("homepage");
   const [isTrue, setIsTrue] = useState<boolean>(false);
+  const [focusID, setFocusID] = useState<string | null>(null);
 
   const setValuePage = useCallback((val: string) => {
     setFlagPage(val);
   }, []);
-
-  useEffect(() => {
-    console.log(flagPage);
-    console.log("È vero che isTrue è ", isTrue)
-  }, [flagPage, isTrue]);
 
   return (
     <NextContext.Provider value={
@@ -43,8 +39,12 @@ export default function Home() {
               navbar={data}
               classNameNavbar={styles.navbar}
               classNameButtons={styles.classNameBtn}
-              setValue={setValuePage} 
-              />
+              classFocusBtn={styles.classFocusButtons}
+              setValue={setValuePage}
+              onFocus={setFocusID}
+              focusID={focusID}
+
+            />
           </div>
           <div className={styles.dynamic_components}>
             <div className={styles.divCenter}>

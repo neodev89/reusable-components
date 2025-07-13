@@ -3,31 +3,25 @@ import { navbarJsonType } from "@/@types/navbarTypes";
 export const Navbar = ({
     navbar,
     setValue,
+    onFocus,
+    focusID,
     classNameNavbar,
     classNameButtons,
+    classFocusBtn
 }: navbarJsonType) => {
-
-    // const handleId = () => {
-    //     const matched = navbar.find(el => el.id)
-    //     if (isTrue && matched) {
-    //         setValue(matched.id);
-    //         setIsTrue(true);
-    //     } else {
-    //         setValue("");
-    //         setIsTrue(false);
-    //     }
-    // }
 
     return (
         <nav className={classNameNavbar}>
             {
                 navbar.map((nav) => {
+                    const isFocused = focusID === nav.page;
                     return (
                         <button
                             key={nav.id}
                             type="button"
-                            className={classNameButtons}
+                            className={isFocused ? classFocusBtn : classNameButtons}
                             onClick={() => setValue(nav.page)}
+                            onFocus={() => onFocus(nav.page)}
                         >
                             {nav.page}
                         </button>

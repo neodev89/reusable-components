@@ -19,7 +19,6 @@ import { handlerTakeData } from '../actions/takeData';
 export default function Homepage() {
   const [data, setData] = useState<Array<navbarType>>([]);
   const [isHome, setIsHome] = useState<string>("inizio");
-  const [inFocus, setInFocus] = useState<string| null>(null);
   const [focusID, setFocusID] = useState<string | null>(null);
 
   const carouselImg: carouselType = {
@@ -30,8 +29,6 @@ export default function Homepage() {
     classNameDivBtn: styles.classNameDivBtn,
     classNameBtn: styles.classNameBtn,
   };
-
-
 
   useEffect(() => {
     const fetchNavbarData = async () => {
