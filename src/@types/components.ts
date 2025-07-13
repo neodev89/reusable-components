@@ -25,6 +25,7 @@ interface cardsType {
   classButtons: string;
   classText: string;
   img: Array<imgType>;
+  bool: boolean;
 }
 
 type ImageObjType = Pick<cardsType, "img">;

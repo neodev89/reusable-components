@@ -54,4 +54,10 @@
     &:hover
         @include mix.shake-on-hover($duration: 0.2s)
         
-        
+.classText
+    @include mix.mixin-display-rw
+    height: 35%
+    width: var.$w-100
+    & p
+        color: rgb(0, 0, 0)
+        font-size: 14px

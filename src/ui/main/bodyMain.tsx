@@ -1,4 +1,4 @@
-import { bodyMainType } from "@/@types/components"
+import { bodyMainType } from "@/@types/components";
 
 export const BodyMain = ({
     classNameBodyMain, classNameText, classList, state, text, experience
@@ -12,20 +12,18 @@ export const BodyMain = ({
                             <p key={el.id}>
                                 {el.page}
                             </p>
-                            <div className={classList}>
+                            <div id={el.id} className={classList}>
                                 {
                                     el.id === "esperienza" ? (
                                         <ul>
                                             {
                                                 experience.map((exp) => {
                                                     return (
-                                                        <>
-                                                            <li key={exp.id}>{`${exp.impresa}:`}
-                                                                <ul>
-                                                                    <li>{exp.value}</li>
-                                                                </ul>
-                                                            </li>
-                                                        </>
+                                                        <li key={exp.id}>{`${exp.impresa}:`}
+                                                            <ul>
+                                                                <li>{exp.value}</li>
+                                                            </ul>
+                                                        </li>
                                                     )
                                                 })
                                             }

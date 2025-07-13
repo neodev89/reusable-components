@@ -204,6 +204,7 @@
     height: 35px
     width: 6rem
     max-width: 10rem
+    margin: 0 0.5rem
     background-color: rgb(10, 10, 200)
     color: rgb(255, 255, 255)
     border-radius: 15px
@@ -225,20 +226,20 @@
         color: rgb(0, 0, 0)
         font-weight: 700
         cursor: pointer
-    &:focus
-        position: relative
-        display: variables.$display-flex
-        flex-direction: variables.$direction-rw
-        justify-content: variables.$j-center
-        align-items: variables.$item-center
-        height: 35px
-        width: 6rem
-        max-width: 10rem
-        background-color: rgb(255, 221, 0)
-        // transform: scale(0)
-        color: rgb(0, 0, 0)
-        font-weight: 700
-        cursor: pointer
+    // &:focus
+    //     position: relative
+    //     display: variables.$display-flex
+    //     flex-direction: variables.$direction-rw
+    //     justify-content: variables.$j-center
+    //     align-items: variables.$item-center
+    //     height: 35px
+    //     width: 6rem
+    //     max-width: 10rem
+    //     background-color: rgb(255, 221, 0)
+    //     // transform: scale(0)
+    //     color: rgb(0, 0, 0)
+    //     font-weight: 700
+    //     cursor: pointer
 
 @mixin mixin-focusButtons
     position: relative
@@ -249,13 +250,10 @@
     height: 35px
     width: 6rem
     max-width: 10rem
-    color: rgb(10, 10, 200)
-    background-color: rgb(255, 255, 255)
-    border: 0.1px solid transparent
-    border-radius: 15px
-    font-family: serif
-    font-size: 14px
-    font-weight: 400
+    background-color: rgb(255, 221, 0)
+    // transform: scale(0)
+    color: rgb(0, 0, 0)
+    font-weight: 700
     cursor: pointer
 
 @mixin mixin-classNameBodyMain

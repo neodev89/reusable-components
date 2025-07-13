@@ -1,0 +1,22 @@
+{
+    "services": [
+        {
+            "id": "siti-vetrina",
+            "src": "",
+            "alt": "",
+            "description": ""
+        },
+        {
+            "id": "web-app",
+            "src": "",
+            "alt": "",
+            "description": ""
+        },
+        {
+            "id": "e-commerce",
+            "src": "",
+            "alt": "",
+            "description": ""
+        }
+    ]
+}

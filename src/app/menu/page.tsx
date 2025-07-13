@@ -37,7 +37,8 @@ export const Menu = () => {
         classDivButtons: styles.classDivButtons,
         classButtons: styles.classButtons,
         classText: styles.classText,
-        img: data
+        img: data,
+        bool: true
     };
 
     return (

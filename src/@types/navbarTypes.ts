@@ -14,8 +14,11 @@ interface ButtonTypes {
 interface navbarJsonType {
     navbar: Array<navbarType>;
     setValue: (value: string) => void;
+    onFocus: (id: string) => void;
+    focusID: string | null;
     classNameNavbar: string;
     classNameButtons: string;
+    classFocusBtn: string;
 }
 
 type navbarType = {

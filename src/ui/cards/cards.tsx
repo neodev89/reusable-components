@@ -1,11 +1,12 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
-import { cardsType } from "@/@types/components"
+import { cardsType } from "@/@types/components";
 import { Buttons } from "./button-cards";
 
 const Cards = ({
     classCards, classCard, classImg, classDivButtons,
-    classButtons, classText, text, img
+    classButtons, classText, img, bool
 }: cardsType) => {
 
     return (
@@ -15,15 +16,17 @@ const Cards = ({
                     return (
                         <div key={`${index}`} className={classCards}>
                             <div className={classCard}>
-                                <Image
-                                    className={classImg}
-                                    height={image.height}
-                                    width={image.width}
-                                    src={image.src}
-                                    alt={image.alt}
-                                    unoptimized
-                                    priority={true}
-                                />
+                                <Link href={`/${image.src}`} prefetch={bool}>
+                                    <Image
+                                        className={classImg}
+                                        height={image.height}
+                                        width={image.width}
+                                        src={image.src}
+                                        alt={image.alt}
+                                        unoptimized
+                                        priority={true}
+                                    />
+                                </Link>
                             </div>
                             <div className={classText}>
                                 <p>{image.text}</p>

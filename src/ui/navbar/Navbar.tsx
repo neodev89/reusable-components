@@ -41,19 +41,30 @@ export const Navbar = ({
 export const SecondNavbar = ({
     navbar,
     setValue,
+    onFocus,
+    focusID,
     classNameNavbar,
     classNameButtons,
+    classFocusBtn,
 }: navbarJsonType) => {
+
+    const handleSetVal = (id: string) => {
+        setValue(id);
+    }
+
     return (
         <nav className={classNameNavbar}>
             {
                 navbar.map((nav) => {
+                    const isFocused = focusID === nav.id;
                     return (
                         <button
                             key={nav.id}
                             type="button"
-                            className={classNameButtons}
-                            onClick={() => setValue(nav.id)}
+                            name={nav.id}
+                            className={isFocused ? classFocusBtn : classNameButtons}
+                            onClick={() => handleSetVal(nav.id)}
+                            onFocus={() => onFocus(nav.id)}
                         >
                             {nav.id}
                         </button>

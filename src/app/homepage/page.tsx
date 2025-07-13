@@ -19,9 +19,8 @@ import { handlerTakeData } from '../actions/takeData';
 export default function Homepage() {
   const [data, setData] = useState<Array<navbarType>>([]);
   const [isHome, setIsHome] = useState<string>("inizio");
-  // const [error, setError] = useState<Error | undefined>(undefined);
-  // const [statusRes, setStatusRes] = useState<string>("");
-  // const [focusButtons, setFocusButtons] = useState<boolean>(false);
+  const [inFocus, setInFocus] = useState<string| null>(null);
+  const [focusID, setFocusID] = useState<string | null>(null);
 
   const carouselImg: carouselType = {
     img: images,
@@ -29,21 +28,19 @@ export default function Homepage() {
     classNameDivImg: styles.divImg,
     classNameImg: styles.img,
     classNameDivBtn: styles.classNameDivBtn,
-    classNameBtn: styles.classNameBtn
-  }
+    classNameBtn: styles.classNameBtn,
+  };
 
-  // useEffect(() => {
-  //   console.log("Ecco lo stato:", isHome);
-  //   fetchData("/api/take-data", setError, setStatusRes, setData);
-  // }, [isHome]);
 
-  useEffect (() => {
+
+  useEffect(() => {
     const fetchNavbarData = async () => {
       const dati = await handlerTakeData();
       setData(dati);
     }
     fetchNavbarData();
   }, []);
+
 
   return (
     <>
@@ -64,7 +61,10 @@ export default function Homepage() {
             navbar={data}
             classNameNavbar={styles.classNameNav}
             classNameButtons={styles.classNameBtn}
-            setValue={setIsHome}        
+            classFocusBtn={styles.classFocusBtn}
+            setValue={setIsHome}
+            onFocus={setFocusID} 
+            focusID={focusID}          
           />
         }
         children2={
