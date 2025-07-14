@@ -23,8 +23,8 @@ export const takeImagesCards = async (): Promise<ImageObjType | null> => {
         const enriched = data.img.map((el) => ({
             ...el,
             height: 15, 
-            width: 15
-        }))
+            width: 15,
+        }));
 
         const newObjData = {
             img: enriched

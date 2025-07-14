@@ -5,8 +5,8 @@ import { cardsType } from "@/@types/components";
 import { Buttons } from "./button-cards";
 
 const Cards = ({
-    classCards, classCard, classImg, classDivButtons,
-    classButtons, classText, img, bool
+    classCards, classCard, classEven, classOdd, classImg, classDivButtons,
+    classButtons, classText, img, bool, href
 }: cardsType) => {
 
     return (
@@ -15,8 +15,8 @@ const Cards = ({
                 img.map((image, index: number) => {
                     return (
                         <div key={`${index}`} className={classCards}>
-                            <div className={classCard}>
-                                <Link href={`/${image.src}`} prefetch={bool}>
+                            <div className={`${classCard} ${index % 2 === 0 ? classEven : classOdd}`}>
+                                <Link href={image.href} prefetch={bool}>
                                     <Image
                                         className={classImg}
                                         height={image.height}
@@ -32,7 +32,18 @@ const Cards = ({
                                 <p>{image.text}</p>
                             </div>
                             <div className={classDivButtons}>
-                                <Buttons classButtons={classButtons} />
+                                {
+                                    href ?
+                                        (href.map((el) => {
+                                            if (el.id === image.alt) {
+                                                return (
+                                                    <Buttons key={el.id} href={el.src} classButtons={classButtons} />
+                                                )
+                                            }
+                                        })) : (
+                                            <Buttons href={"#"} classButtons={classButtons} />
+                                        )
+                                }
                             </div>
                         </div>
                     )

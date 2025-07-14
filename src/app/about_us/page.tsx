@@ -10,19 +10,21 @@ export default function AboutUs() {
   const cardsObj: cardsType = {
     classCards: styles.classCards,
     classCard: styles.classCard,
+    classEven: styles.classEven,
+    classOdd: styles.classOdd,
     classImg: styles.classImg,
     classDivButtons: styles.classDivButtons,
     classButtons: styles.classButtons,
     classText: styles.classText,
     bool: true,
-    img: images
+    img: images,
   };
 
   return (
-    <>
+    <div className={styles.about_us}>
       <div className={styles.cards}>
         <Cards {...cardsObj} />
       </div>
-    </>
+    </div>
   );
 }

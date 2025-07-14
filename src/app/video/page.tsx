@@ -4,7 +4,7 @@ import { CarouselVid } from "@/ui/carosello/carousel_vid";
 import { carouselVidType } from "@/@types/components";
 import LayoutProgetti from "./layout";
 
-export const Progetti = () => {
+export const Video = () => {
 
     const carouselVid: carouselVidType = {
         vid : [

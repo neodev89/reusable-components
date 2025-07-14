@@ -10,7 +10,7 @@ import { useCallback, useEffect, useState } from "react";
 import { NextContext } from "../ui/context/myContext";
 import { Navbar } from "../ui/navbar/Navbar";
 import { Footer } from "@/ui/footer/square-footer";
-import { Progetti } from "./progetti/page";
+import { Video } from "./video/page";
 import { Menu } from "./menu/page";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
             <div className={styles.divCenter}>
               {flagPage === 'homepage' && <Homepage />}
               {flagPage === 'about us' && <AboutUs />}
-              {flagPage === 'progetti' && <Progetti />}
+              {flagPage === 'video' && <Video />}
               {flagPage === 'contatti' && <Contatti />}
               {flagPage === 'menu' && <Menu />}
               <div className={styles.footer}>

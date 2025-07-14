@@ -6,6 +6,7 @@ interface imgType {
   height: number;
   width: number;
   text: string;
+  href: string;
 }
 
 interface carouselType {
@@ -20,15 +21,23 @@ interface carouselType {
 interface cardsType {
   classCards: string;
   classCard: string;
+  classEven?: string;
+  classOdd?: string;
   classImg: string;
   classDivButtons: string;
   classButtons: string;
   classText: string;
   img: Array<imgType>;
+  href?: Array<{ id: string, src: string }>;
   bool: boolean;
 }
 
 type ImageObjType = Pick<cardsType, "img">;
+
+interface btnType {
+  classButtons: string;
+  href: string;
+}
 
 interface carouselVidType {
   vid: Array<videoType>;
@@ -107,5 +116,6 @@ export type {
   videoType,
   cardsType,
   imgType,
-  ImageObjType
+  ImageObjType,
+  btnType
 };

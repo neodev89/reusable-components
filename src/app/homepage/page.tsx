@@ -33,11 +33,21 @@ export default function Homepage() {
   useEffect(() => {
     const fetchNavbarData = async () => {
       const dati = await handlerTakeData();
-      setData(dati);
+
+      const newDati = dati.map((dato) => {
+        if (dato.id === "tecnologie") {
+          return {
+            ...dato,
+            page: `${dato.page} React.js, TypeScript, Next.js.`,
+          }
+        } else {
+          return dato;
+        }
+      })
+      setData(newDati);
     }
     fetchNavbarData();
   }, []);
-
 
   return (
     <>

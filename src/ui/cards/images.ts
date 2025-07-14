@@ -7,6 +7,7 @@ const images: imgType[] = [
         alt: "next-svg",
         height: 20,
         width: 20,
+        href: "https://github.com/neodev89/BMR-NextJs-App"
     },
     {
         text: "next.svg",
@@ -14,6 +15,7 @@ const images: imgType[] = [
         alt: "next-svg",
         height: 20,
         width: 20,
+        href: "https://github.com/neodev89/TODO_list_nextjs"
     },
     {
         text: "next.svg",
@@ -21,6 +23,7 @@ const images: imgType[] = [
         alt: "next-svg",
         height: 20,
         width: 20,
+        href: "https://github.com/neodev89/web-app"
     },
 ];
 

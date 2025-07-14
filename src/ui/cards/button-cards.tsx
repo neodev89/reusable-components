@@ -1,41 +1,23 @@
-import { cardsType } from "@/@types/components";
-import Image from "next/image";
+import { btnType } from "@/@types/components";
 import { useState } from "react";
 
-const Buttons = ({ classButtons }: Partial<cardsType>) => {
+import Link from "next/link";
+
+const Buttons = ({ classButtons, href }: btnType) => {
 
     const [isLike, setIsLike] = useState(false);
-    const [isDislike, setIsDislike] = useState(false);
 
     return (
-        <>
+        <Link href={href}>
             <button
                 type="button"
                 name="like"
                 className={classButtons}
                 onClick={() => setIsLike(isLike)}
             >
-                <Image
-                    height={30}
-                    width={30}
-                    src="/like-svg.png"
-                    alt="like-png-button"
-                />
+                Mostramelo
             </button>
-            <button
-                type="button"
-                name="dislike"
-                className={classButtons}
-                onClick={() => setIsDislike(isDislike)}
-            >
-                <Image
-                    height={30}
-                    width={30}
-                    src={"/dislike-svg.png"}
-                    alt="dislike-png-button"
-                />
-            </button>
-        </>
+        </Link>
     )
 }
 

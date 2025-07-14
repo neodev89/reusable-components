@@ -33,14 +33,14 @@
 
 .classCard
     @include mix.mixin-display-rw
-    height: 50%
+    height: 70%
     width: var.$w-100
     border: var.$border-red
     border-radius: 15px
     padding: 0.3rem
 
 .classImg
-    object-fit: cover
+    object-fit: scale-down
     object-position: center
     border-radius: 15px
     height: var.$h-100
@@ -61,8 +61,11 @@
 
 .classText
     @include mix.mixin-display-rw
-    height: 35%
+    @include mix.mixin-flex-center
+        
+    height: 15%
     width: var.$w-100
     & p
         color: rgb(0, 0, 0)
         font-size: 14px
+        text-align: center

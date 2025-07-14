@@ -3,38 +3,46 @@
 
 .about_us
     @include mix.mixin-display-rw
-    justify-content: var.$j-center
-    height: var.$h-100
+    @include mix.mixin-flex-center
+
+    height: 50rem
     width: var.$w-100
+    box-shadow: var.$b-shadow-multiple-GandB
+    border-radius: 1rem
 
 .cards
     @include mix.mixin-display-rw
     flex-wrap: wrap
     justify-content: var.$j-evenly
-    height: var.$h-100
-    width: var.$w-100
-    border: var.$border-blue
+    height: 95%
+    width: 95%
 
 .classCards
     @include mix.mixin-display-cl
     @include mix.mixin-family-montserrat-hard
     align-items: var.$item-center
-    height: 18rem
-    width: 15rem
+    height: 22rem
+    width: 12rem
     border: var.$border-black
     padding: 0.5rem
     &:nth-child(odd)
         border-radius: 20px 10px
+        box-shadow: var.$b-shadow-grey
     &:nth-child(even)
         border-radius: 10px 20px
+        box-shadow: var.$b-shadow-grey-r
 
 .classCard
     @include mix.mixin-display-rw
     height: 70%
     width: var.$w-100
-    border: var.$border-red
-    border-radius: 15px
-           
+    border: var.$border-gray
+
+.classEven
+    border-radius: 20px 10px
+
+.classOdd
+    border-radius: 10px 20px
 
 .classImg
     object-fit: scale-down
@@ -45,19 +53,22 @@
 .classDivButtons
     @include mix.mixin-display-rw
     justify-content: space-around
-    height: 30%
+    height: 15%
     width: var.$w-100
-    border: var.$border-blue
+    // border: var.$border-blue
 
 .classButtons
     @include mix.mixin-classNameBtn
     &:hover
         @include mix.shake-on-hover($duration: 0.2s)
-        
+
 .classText
     @include mix.mixin-display-rw
-    height: 35%
+    @include mix.mixin-flex-center
+
+    height: 15%
     width: var.$w-100
     & p
         color: rgb(0, 0, 0)
         font-size: 14px
+        text-align: center

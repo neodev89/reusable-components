@@ -15,6 +15,7 @@ export const handlerTakeData = async (): Promise<navbarType[]> => {
 
         const content = await fs.readFile(filePath, 'utf-8');
         const data = JSON.parse(content);
+        
         const home: navbarType[] = data.dynamic_homepage;
 
         return home;

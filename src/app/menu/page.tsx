@@ -10,12 +10,6 @@ import { takeImagesCards } from '../actions/takeCards';
 export const Menu = () => {
     const [data, setData] = useState<imgType[]>([]);
     const [cardText, setCardText] = useState<string>("")
-    // const [error, setError] = useState<Error | any>(undefined);
-    // const [statusRes, setStatusRes] = useState<string>("");
-
-    // useEffect(() => {
-    //     fetchData("/api/take-cards", setError, setStatusRes, setData);
-    // }, []);
 
     useEffect(() => {
         const fetchImages = async () => {
