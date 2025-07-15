@@ -1,4 +1,4 @@
-import { ComponentType, ReactNode } from "react";
+import { ComponentType, Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react";
 
 interface imgType {
   src: string;
@@ -33,6 +33,7 @@ interface cardsType {
 }
 
 type ImageObjType = Pick<cardsType, "img">;
+type takeCardsType = Omit<cardsType, "img">;
 
 interface btnType {
   classButtons: string;
@@ -117,5 +118,6 @@ export type {
   cardsType,
   imgType,
   ImageObjType,
-  btnType
+  btnType,
+  takeCardsType
 };

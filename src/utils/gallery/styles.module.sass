@@ -1,0 +1,32 @@
+.classGallery
+    @include mix.mixin-display-cl
+    @include mix.mixin-family-montserrat-hard
+    align-items: var.$item-center
+    height: 22rem
+    width: 12rem
+    border: var.$border-black
+    padding: 0.5rem
+    &:nth-child(odd)
+        border-radius: 20px 10px
+        box-shadow: var.$b-shadow-grey
+    &:nth-child(even)
+        border-radius: 10px 20px
+        box-shadow: var.$b-shadow-grey-r
+
+.classPhoto
+    @include mix.mixin-display-rw
+    height: 70%
+    width: var.$w-100
+    border: var.$border-gray
+
+.classEven
+    border-radius: 10px 20px
+
+.classOdd
+    border-radius: 20px 10px
+
+.classImage
+    object-fit: scale-down
+    object-position: center
+    height: var.$h-100
+    width: var.$w-100

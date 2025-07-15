@@ -18,9 +18,9 @@ const images: imgType[] = [
         href: "https://github.com/neodev89/TODO_list_nextjs"
     },
     {
-        text: "next.svg",
-        src: "/next.svg",
-        alt: "next-svg",
+        text: "la mia prima simulazione di web app con le mie canzoni preferite",
+        src: "/app-song.png",
+        alt: "un'app musicale con i miei artisti preferiti",
         height: 20,
         width: 20,
         href: "https://github.com/neodev89/web-app"

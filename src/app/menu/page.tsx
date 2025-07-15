@@ -1,11 +1,12 @@
 "use client"
 import styles from './style.module.sass';
 
-import { cardsType, imgType } from '@/@types/components';
+import { cardsType, imgType, takeCardsType } from '@/@types/components';
 // import { fetchData } from '@/pages/fetches/fetch';
 import { Cards } from '@/ui/cards/cards';
 import { useEffect, useState } from 'react';
-import { takeImagesCards } from '../actions/takeCards';
+import { takeImagesCards } from '../../actions/takeCards';
+
 
 export const Menu = () => {
     const [data, setData] = useState<imgType[]>([]);
@@ -39,6 +40,7 @@ export const Menu = () => {
         <div className={styles.menu}>
             <div className={styles.cardsMenu}>
                 <Cards {...cards} />
+                {/* <CardList {...cardsList} /> */}
             </div>
         </div>
     )

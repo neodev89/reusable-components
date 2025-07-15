@@ -6,7 +6,7 @@ import { Buttons } from "./button-cards";
 
 const Cards = ({
     classCards, classCard, classEven, classOdd, classImg, classDivButtons,
-    classButtons, classText, img, bool, href
+    classButtons, classText, img, bool
 }: cardsType) => {
 
     return (
@@ -33,14 +33,10 @@ const Cards = ({
                             </div>
                             <div className={classDivButtons}>
                                 {
-                                    href ?
-                                        (href.map((el) => {
-                                            if (el.id === image.alt) {
-                                                return (
-                                                    <Buttons key={el.id} href={el.src} classButtons={classButtons} />
-                                                )
-                                            }
-                                        })) : (
+                                    image.href !== "#" ?
+                                        (
+                                            <Buttons href={image.href} classButtons={classButtons} />
+                                        ) : (
                                             <Buttons href={"#"} classButtons={classButtons} />
                                         )
                                 }

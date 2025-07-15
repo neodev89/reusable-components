@@ -13,7 +13,7 @@ import { BodyMain } from '@/ui/main/bodyMain';
 import { navbarType } from '@/@types/navbarTypes';
 // import { fetchData } from '@/pages/fetches/fetch';
 import { images } from '@/ui/carosello/images-carousel';
-import { handlerTakeData } from '../actions/takeData';
+import { handlerTakeData } from '../../actions/takeData';
 
 
 export default function Homepage() {

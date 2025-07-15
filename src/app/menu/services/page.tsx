@@ -1,5 +1,5 @@
 // app/products/page.tsx
-import { takeService } from "@/app/actions/takeService"; // la tua funzione 'use server'
+import { takeService } from "@/actions/takeService"; // la tua funzione 'use server'
 import Image from "next/image";
 
 export const dynamic = "force-dynamic"; // ➜ SSR ad ogni richiesta

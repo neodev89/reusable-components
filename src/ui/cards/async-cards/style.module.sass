@@ -1,0 +1,56 @@
+@use '../../../styles/mixins' as mix
+@use '../../../styles/variables' as var
+  
+.classGallery
+    @include mix.mixin-display-cl
+    @include mix.mixin-family-montserrat-hard
+    justify-content: space-around
+    align-items: var.$item-center
+    height: 20rem
+    width: 16rem
+    border: var.$border-black
+    padding: 0.5rem
+    // margin: 0 0.5rem
+    &:nth-child(odd)
+        border-radius: 20px 10px
+    &:nth-child(even)
+        border-radius: 10px 20px
+
+.classPhoto
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    
+    height: 70%
+    width: var.$w-100
+    border: var.$border-red
+    border-radius: 15px
+
+.classImage
+    object-fit: contain
+    object-position: center
+    border-radius: 15px
+    height: var.$h-100
+    max-height: 130px
+    width: var.$w-100
+
+.classText
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+        
+    height: 15%
+    width: var.$w-100
+    & p
+        color: rgb(0, 0, 0)
+        font-size: 14px
+        text-align: center
+
+.classEven
+    border-radius: 10px 20px
+
+.classOdd
+    border-radius: 20px 10px
+
+.classP
+    text-align: center
+    color: rgb(0, 0, 0)
+

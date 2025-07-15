@@ -4,19 +4,19 @@
             "src": "https://www.logogenio.it/icons/preview/5362",
             "alt": "Bar",
             "text": "Sito web per Bar",
-            "href": "#"
+            "href": "/menu/bar"
         },
         {
             "src": "https://static.vecteezy.com/ti/vettori-gratis/t1/11157909-pizzeria-vettore-emblema-su-lavagna-pizza-logo-modello-vettore-emblema-per-bar-ristorante-o-cibo-consegna-servizio-vettoriale.jpg",
             "alt": "Ristoranti e pizzerie",
             "text": "Web app per la ristorazione",
-            "href": "#"
+            "href": "/menu/restaurant"
         },
         {
             "src": "https://www.shutterstock.com/image-vector/camera-photography-logo-design-vector-260nw-2477380739.jpg",
             "alt": "Fotografi",
             "text": "Un sito vetrina adatto all'arte della fotografia",
-            "href": "#"
+            "href": "/menu/photography"
         }
     ]
 }

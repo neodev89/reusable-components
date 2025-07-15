@@ -1,7 +1,7 @@
 "use server"
 import fs from 'fs/promises';
 import path from 'path';
-import { ImageObjType, imgType } from '@/@types/components';
+import { ImageObjType } from '@/@types/components';
 
 export const takeImagesCards = async (): Promise<ImageObjType | null> => {
     try {

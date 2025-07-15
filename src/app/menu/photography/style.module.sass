@@ -1,0 +1,40 @@
+@use '../../../styles/mixins' as mix
+@use '../../../styles/variables' as var
+
+.classDiv
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+
+    background-color: rgb(255, 255, 255)
+    height: 100%
+    width: 100%
+    overflow: auto
+
+.classPhotography
+    @include mix.mixin-display-cl
+    @include mix.mixin-flex-center
+
+    height: 100%
+    width: 100%
+
+.classPhoto
+    @include mix.mixin-display-rw
+    align-items: var.$item-center
+    justify-content: var.$j-around
+    flex-wrap: wrap
+    height: 50rem
+    width: 97%
+    border: var.$border-blue
+
+.back
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    
+    height: 5rem
+    width: 10rem
+    border: var.$border-red
+    margin: 5rem
+    color: rgb(0, 0, 0)
+
+.classBtn
+    @include mix.mixin-classNameBtn
