@@ -3,15 +3,21 @@ type photoType = {
 }
 
 interface galleryType {
-    tramonti: Array<gallery>;
-    albe: Array<gallery>;
+    sunset: Array<gallery>;
+    dawn: Array<gallery>;
 }
 
 interface gallery {
     id: string;
-    alt: string;
-    src: string;
+    title: string;
+    description: string;
+    image_alt: string;
+    image_src: string;
+    category: string;
+    date_up: string;
+    visible: boolean;
     bool: boolean;
+    tags: Array<string>;
 }
 
 interface galleryImageType {

@@ -1,61 +1,115 @@
 {
     "photo": {
-        "tramonti": [
+        "sunset": [
             {
                 "id": "tramonto-sul-mare",
-                "alt": "tramonto sul mare",
-                "src": "https://hips.hearstapps.com/hmg-prod/images/rachel-cook-mocdke2zqoe-unsplash-64709a422bad4.jpg",
-                "bool": true
+                "title": "tramonto-sul-mare",
+                "image_alt": "tramonto sul mare",
+                "description": "tramonto sul mare",
+                "image_src": "https://hips.hearstapps.com/hmg-prod/images/rachel-cook-mocdke2zqoe-unsplash-64709a422bad4.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "tramonti-mediterranei",
-                "alt": "tramonti mediterranei",
-                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLV5PW9yO_WuGIzvQ3qDPGWx-IGD0lCy4B5A&s",
-                "bool": true
+                "title": "tramonti-mediterranei",
+                "image_alt": "tramonti mediterranei",
+                "description": "tramonti mediterranei",
+                "image_src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLV5PW9yO_WuGIzvQ3qDPGWx-IGD0lCy4B5A&s",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "tramonto-su-isola-elba",
-                "alt": "tramonto sull'isola d'Elba",
-                "src": "https://dati.infoelba.it/media/photos/isola-d-elba/tramonti/o_tramonto-portoferraio_0118.jpg?quality=90&mode=crop&w=1280",
-                "bool": true
+                "title": "tramonto-su-isola-elba",
+                "image_alt": "tramonto sull'isola d'Elba",
+                "description": "tramonto sull'isola d'Elba",
+                "image_src": "https://dati.infoelba.it/media/photos/isola-d-elba/tramonti/o_tramonto-portoferraio_0118.jpg?quality=90&mode=crop&w=1280",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "tramonto-marino",
-                "alt": "tramonto marino con barca sulla sabbia",
-                "src": "https://blog.andrearontini.it/wp-content/uploads/2019/07/DSCF0027-3.jpg",
-                "bool": true
+                "title": "tramonto-marino",
+                "image_alt": "tramonto marino con barca sulla sabbia",
+                "description": "tramonto marino con barca sulla sabbia",
+                "image_src": "https://blog.andrearontini.it/wp-content/uploads/2019/07/DSCF0027-3.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "tramonto-rosso-sul-mare",
-                "alt": "tramonto rosso sul mare calmo",
-                "src": "https://services.meteored.com/img/article/perche-sole-e-luna-si-tingono-di-rosso-all-alba-e-al-tramonto-1723049784862_1280.png",
-                "bool": true
+                "title": "tramonto-rosso-sul-mare",
+                "image_alt": "tramonto rosso sul mare calmo",
+                "description": "tramonto rosso sul mare calmo",
+                "image_src": "https://services.meteored.com/img/article/perche-sole-e-luna-si-tingono-di-rosso-all-alba-e-al-tramonto-1723049784862_1280.png",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             }
         ],
-        "albe": [
+        "dawn": [
             {
                 "id": "alba-sul-mare",
-                "alt": "alba spettacolare sul mare calmo",
-                "src": "https://ilfotografo.it/wp-content/uploads/2018/07/morgenstimmung-275275_960_720-1.jpg",
-                "bool": true
+                "title": "alba-sul-mare",
+                "image_alt": "alba spettacolare sul mare calmo",
+                "description": "alba spettacolare sul mare calmo",
+                "image_src": "https://ilfotografo.it/wp-content/uploads/2018/07/morgenstimmung-275275_960_720-1.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "alba-in-val-di-sole",
-                "alt": "spettacolare alba in val di Sole tra due montagne",
-                "src": "https://experiencevaldisole.com/wp-content/uploads/2022/05/alba-alveo-presena-scaled.jpg",
-                "bool": true
+                "title": "alba-in-val-di-sole",
+                "image_alt": "spettacolare alba in val di Sole tra due montagne",
+                "description": "spettacolare alba in val di Sole tra due montagne",
+                "image_src": "https://experiencevaldisole.com/wp-content/uploads/2022/05/alba-alveo-presena-scaled.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "alba-su-neve",
-                "alt": "alba su paesaggio innevato",
-                "src": "https://st4.depositphotos.com/1001411/22588/i/450/depositphotos_225889846-stock-photo-winter-morning-snow-frost.jpg",
-                "bool": true
+                "title": "alba-su-neve",
+                "image_alt": "alba su paesaggio innevato",
+                "description": "alba su paesaggio innevato",
+                "image_src": "https://st4.depositphotos.com/1001411/22588/i/450/depositphotos_225889846-stock-photo-winter-morning-snow-frost.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             },
             {
                 "id": "alba-tra-fronde-ghiacciate",
-                "alt": "alba fotografata tra fronde ghiacciate",
-                "src": "https://st5.depositphotos.com/15076092/67646/i/450/depositphotos_676460794-stock-photo-sunrise-snow-maulbronn-morning-mood.jpg",
-                "bool": true
+                "title": "alba-tra-fronde-ghiacciate",
+                "image_alt": "alba fotografata tra fronde ghiacciate",
+                "description": "alba fotografata tra fronde ghiacciate",
+                "image_src": "https://st5.depositphotos.com/15076092/67646/i/450/depositphotos_676460794-stock-photo-sunrise-snow-maulbronn-morning-mood.jpg",
+                "category": "",
+                "date_up": "",
+                "visible": false,
+                "bool": true,
+                "tags": []
             }
         ]
     }

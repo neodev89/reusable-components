@@ -7,8 +7,8 @@ import { JSX } from "react";
 
 export const CardsPhoto: () => Promise<JSX.Element> = async () => {
     const gallery = await takePhoto();
-    const dawn = gallery?.photo.albe;
-    const sunset = gallery?.photo.tramonti;
+    const dawn = gallery?.photo.dawn;
+    const sunset = gallery?.photo.sunset;
 
     return (
         <>
@@ -18,20 +18,20 @@ export const CardsPhoto: () => Promise<JSX.Element> = async () => {
                         return (
                             <div key={`${el.id}`} className={styles.classGallery}>
                                 <div className={`${styles.classPhoto} ${index % 2 === 0 ? styles.classOdd : styles.classEven}`}>
-                                    <Link href={el.src} prefetch={el.bool}>
+                                    <Link href={el.image_src} prefetch={el.bool}>
                                         <Image
                                             className={styles.classImage}
                                             height={100}
                                             width={100}
-                                            src={el.src}
-                                            alt={el.alt}
+                                            src={el.image_src}
+                                            alt={el.image_alt}
                                             unoptimized
                                             priority={false}
                                         />
                                     </Link>
                                 </div>
                                 <div className={styles.classText}> 
-                                    <p>{el.alt}</p>
+                                    <p>{el.image_alt}</p>
                                 </div>
                             </div>
                         )
@@ -46,20 +46,20 @@ export const CardsPhoto: () => Promise<JSX.Element> = async () => {
                         return (
                             <div key={`${el.id}`} className={styles.classGallery}>
                                 <div className={`${styles.classPhoto} ${index % 2 === 0 ? styles.classOdd : styles.classEven}`}>
-                                    <Link href={el.src} prefetch={el.bool}>
+                                    <Link href={el.image_src} prefetch={el.bool}>
                                         <Image
                                             className={styles.classImage}
                                             height={100}
                                             width={100}
-                                            src={el.src}
-                                            alt={el.alt}
+                                            src={el.image_src}
+                                            alt={el.image_alt}
                                             unoptimized
                                             priority={false}
                                         />
                                     </Link>
                                 </div>
                                 <div className={styles.classText}>
-                                    <p>{el.alt}</p>
+                                    <p>{el.image_alt}</p>
                                 </div>
                             </div>
                         )
