@@ -2,32 +2,36 @@ import { imgType } from "@/@types/components";
 
 const images: imgType[] = [
     {
-        src: '/reusable_components.png',
+        src: '/image/reusable_components.png',
         alt: "Codice incorniciato",
         text: "Codice incorniciato",
         height: 100,
         width: 200,
+        href: ""
     },
     {
-        src: '/Codice2.jpeg',
+        src: '/image/Codice2.jpeg',
         alt: "Codice incorniciato",
         text: "Codice incorniciato",
         height: 100,
         width: 200,
+        href: ""
     },
     {
-        src: '/Codice3.jpeg',
+        src: '/image/Codice3.jpeg',
         alt: "Codice incorniciato",
         text: "Codice incorniciato",
         height: 100,
         width: 200,
+        href: ""
     },
     {
-        src: '/Codice4.jpeg',
+        src: '/image/Codice4.jpeg',
         alt: "Codice incorniciato",
         text: "Codice incorniciato",
         height: 100,
         width: 200,
+        href: ""
     },
 ];
 

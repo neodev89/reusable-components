@@ -14,7 +14,7 @@ export const Video = () => {
                 controls: true,
                 autoplay: true,
                 loop: true,
-                source: {src: "/vid-writing-sass.mp4", type: "video/mp4"}
+                source: {src: "/video/vid-writing-sass.mp4", type: "video/mp4"}
             },
             {
                 height: "250",
@@ -22,7 +22,7 @@ export const Video = () => {
                 controls: true,
                 autoplay: true,
                 loop: true,
-                source: {src: "/prototype-website-video.mp4", type: "video/mp4"}
+                source: {src: "/video/prototype-website-video.mp4", type: "video/mp4"}
             },
         ],
         classNameDiv: styles.container_div,
