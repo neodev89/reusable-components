@@ -37,6 +37,24 @@
     font-weight: 800
     font-size: 32px
 
+@mixin boolean-border
+    @if (variables.$bool-border)
+        border: variables.$border-blue 
+    @else 
+        border: none
+
+@mixin bool-border-red 
+    @if (variables.$bool-border) 
+        border: variables.$border-red 
+    @else 
+        border: none
+
+@mixin bool-border-green 
+    @if (variables.$bool-border)
+        border: variables.$border-green 
+    @else 
+        border: none
+
 // Homepage style
 
 @mixin mixin-homepage

@@ -8,6 +8,7 @@ interface galleryType {
 }
 
 interface gallery {
+    origin_id: string;
     id: string;
     title: string;
     description: string;

@@ -3,9 +3,9 @@ import { gallery, photoType } from '@/@types/photograph';
 import { v4 as uuid } from "uuid";
 import { initialGallery } from '@/content/photograph/initialState';
 import { joinPaths } from '@/lib/paths/paths';
-import { supabase } from '@/lib/supabaseClient';
 
 import fs from 'fs/promises';
+import { insertPhotoIsUnique } from './insertPhotIsUnique';
 
 export const takePhoto = async (): Promise<photoType | null> => {
     try {
@@ -14,9 +14,9 @@ export const takePhoto = async (): Promise<photoType | null> => {
         const gallery: photoType = JSON.parse(readFile);
 
         if (gallery) {
-            const newGalleryDawn: gallery[] = gallery.photo.dawn.map((el) => ({
+            const newGalleryDawn: gallery[] = gallery.photo.dawn.map((el) => (
+                {
                 ...el,
-                id: uuid(),
                 date_up: new Date().toISOString(),
                 category: "dawn",
                 visible: true,
@@ -25,7 +25,6 @@ export const takePhoto = async (): Promise<photoType | null> => {
 
             const newGallerySunset: gallery[] = gallery.photo.sunset.map((el) => ({
                 ...el,
-                id: uuid(),
                 date_up: new Date().toISOString(),
                 category: "sunset",
                 visible: true,
@@ -37,16 +36,7 @@ export const takePhoto = async (): Promise<photoType | null> => {
                 sunset: newGallerySunset
             }
 
-            const allPhoto = [...newGalleryDawn, ...newGallerySunset];
-
-            const { error } = await supabase
-                .from("fotografie")
-                .insert(allPhoto);
-
-            if (error) {
-                console.error("Errore nell'inserimento in db", error);
-                return null;
-            }
+            await insertPhotoIsUnique(gallery);
 
             return gallery;
 

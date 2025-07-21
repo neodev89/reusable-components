@@ -1,0 +1,173 @@
+import Image from "next/image";
+import styles from "./style.module.sass";
+
+
+
+export default function LogoRotation() {
+
+    const globe: Array<{ id: string, src: string, alt: string }> = [
+        {
+            id: "html5",
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+            alt: "logo HTML 5"
+        },
+        {
+            id: "css3",
+            src: "https://images.seeklogo.com/logo-png/18/1/css3-logo-png_seeklogo-186678.png",
+            alt: "logo CSS 3"
+        },
+        {
+            id: "JavaScript",
+            src: "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png",
+            alt: "logo JavaScript"
+        },
+        {
+            id: "express",
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKmtAv2G_LoVvYzVphgkaW6W1yj3z0tR7igw&s",
+            alt: "logo Express.js"
+        },
+        {
+            id: "typescript",
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+            alt: "lo TypeScript"
+        },
+        {
+            id: "react",
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+            alt: "logo React.js"
+        },
+        {
+            id: "next",
+            src: "https://images.seeklogo.com/logo-png/32/2/next-js-logo-png_seeklogo-321806.png",
+            alt: "logo Next.js"
+        }
+    ]
+
+    return (
+        <div className={styles.bar}>
+            <div className={styles.central}>
+                <div className={styles.both}>
+                    <div className={styles.ruota}>
+                        <div className={styles.ruota_div}>
+                            {
+                                globe.map((el, i) => {
+                                    return (
+                                        <div
+                                            key={el.id}
+                                            className={styles.globe}
+                                            style={{ "--i": i } as React.CSSProperties}
+                                        >
+                                            <Image
+                                                unoptimized={true}
+                                                id={el.id}
+                                                className={styles.images}
+                                                src={el.src}
+                                                alt={el.alt}
+                                                height={50}
+                                                width={50}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.both}>
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+$num_loghi: 7
+$raggio: 12.5rem
+$width_logo: 7rem
+$width_ruota_div: 25rem
+
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes rotateGlobe
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-360deg)
+
+.bar
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    @include mix.boolean-border
+
+    height: 100vh
+    width: 100vw
+    background-color: var.$bg-white
+
+.central
+    @include mix.mixin-display-rw
+    @include mix.boolean-border
+
+    justify-content: space-evenly
+    align-items: center
+    height: 97%
+    width: 97%
+
+.both
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    @include mix.boolean-border
+
+    height: 35rem
+    width: 45%
+
+.ruota
+    @include mix.bool-border-red
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+
+    height: 90%
+    width: 90%
+
+.ruota_div
+    @include mix.bool-border-green
+
+    position: relative
+    display: block
+    width: 25rem
+    height: 25rem
+    border-radius: 50% 50%
+    animation: spin 15s linear infinite
+
+.globe
+    @include mix.bool-border-red
+
+    position: absolute
+    display: block
+    height: auto
+    width: auto
+    top: 58%
+    left: 58%
+    margin: 0
+    @for $i from 0 through ($num_loghi)
+        &:nth-child(#{$i + 1})
+            $angolo: (360deg / $num_loghi) * ($i)
+            $x_pos: $raggio * cos($angolo)
+            $y_pos: $raggio * sin($angolo)
+            transform: translate(
+                calc(#{$x_pos} - (#{$width_logo} / 2)),
+                calc(#{$y_pos} - (#{$width_logo} / 2))
+            ) 
+
+.images
+    @include mix.bool-border-green
+
+    position: relative
+    display: flex
+    object-fit: scale-down
+    object-position: center
+    animation: rotateGlobe 15s linear infinite

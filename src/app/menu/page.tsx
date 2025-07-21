@@ -6,6 +6,7 @@ import { cardsType, imgType, takeCardsType } from '@/@types/components';
 import { Cards } from '@/ui/cards/cards';
 import { useEffect, useState } from 'react';
 import { takeImagesCards } from '../../actions/takeCards';
+import { insertPhotoIsUnique } from '@/actions/insertPhotIsUnique';
 
 
 export const Menu = () => {

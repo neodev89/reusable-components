@@ -2,7 +2,8 @@
     "photo": {
         "sunset": [
             {
-                "id": "tramonto-sul-mare",
+                "origin_id": "tramonto-sul-mare",
+                "id": "",
                 "title": "tramonto-sul-mare",
                 "image_alt": "tramonto sul mare",
                 "description": "tramonto sul mare",
@@ -14,7 +15,8 @@
                 "tags": []
             },
             {
-                "id": "tramonti-mediterranei",
+                "origin_id": "tramonti-mediterranei",
+                "id": "",
                 "title": "tramonti-mediterranei",
                 "image_alt": "tramonti mediterranei",
                 "description": "tramonti mediterranei",
@@ -26,7 +28,8 @@
                 "tags": []
             },
             {
-                "id": "tramonto-su-isola-elba",
+                "origin_id": "tramonto-su-isola-elba",
+                "id": "",
                 "title": "tramonto-su-isola-elba",
                 "image_alt": "tramonto sull'isola d'Elba",
                 "description": "tramonto sull'isola d'Elba",
@@ -38,7 +41,8 @@
                 "tags": []
             },
             {
-                "id": "tramonto-marino",
+                "origin_id": "tramonto-marino",
+                "id": "",
                 "title": "tramonto-marino",
                 "image_alt": "tramonto marino con barca sulla sabbia",
                 "description": "tramonto marino con barca sulla sabbia",
@@ -50,7 +54,8 @@
                 "tags": []
             },
             {
-                "id": "tramonto-rosso-sul-mare",
+                "origin_id": "tramonto-rosso-sul-mare",
+                "id": "",
                 "title": "tramonto-rosso-sul-mare",
                 "image_alt": "tramonto rosso sul mare calmo",
                 "description": "tramonto rosso sul mare calmo",
@@ -64,7 +69,8 @@
         ],
         "dawn": [
             {
-                "id": "alba-sul-mare",
+                "origin_id": "alba-sul-mare",
+                "id": "",
                 "title": "alba-sul-mare",
                 "image_alt": "alba spettacolare sul mare calmo",
                 "description": "alba spettacolare sul mare calmo",
@@ -76,7 +82,8 @@
                 "tags": []
             },
             {
-                "id": "alba-in-val-di-sole",
+                "origin_id": "alba-in-val-di-sole",
+                "id": "",
                 "title": "alba-in-val-di-sole",
                 "image_alt": "spettacolare alba in val di Sole tra due montagne",
                 "description": "spettacolare alba in val di Sole tra due montagne",
@@ -88,7 +95,8 @@
                 "tags": []
             },
             {
-                "id": "alba-su-neve",
+                "origin_id": "alba-su-neve",
+                "id": "",
                 "title": "alba-su-neve",
                 "image_alt": "alba su paesaggio innevato",
                 "description": "alba su paesaggio innevato",
@@ -100,7 +108,8 @@
                 "tags": []
             },
             {
-                "id": "alba-tra-fronde-ghiacciate",
+                "origin_id": "alba-tra-fronde-ghiacciate",
+                "id": "",
                 "title": "alba-tra-fronde-ghiacciate",
                 "image_alt": "alba fotografata tra fronde ghiacciate",
                 "description": "alba fotografata tra fronde ghiacciate",
