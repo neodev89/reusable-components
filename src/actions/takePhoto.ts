@@ -1,6 +1,5 @@
 "use server"
 import { gallery, photoType } from '@/@types/photograph';
-import { v4 as uuid } from "uuid";
 import { initialGallery } from '@/content/photograph/initialState';
 import { joinPaths } from '@/lib/paths/paths';
 
@@ -36,7 +35,7 @@ export const takePhoto = async (): Promise<photoType | null> => {
                 sunset: newGallerySunset
             }
 
-            await insertPhotoIsUnique(gallery);
+            // await insertPhotoIsUnique(gallery);
 
             return gallery;
 
