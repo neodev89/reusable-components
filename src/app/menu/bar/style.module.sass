@@ -1,3 +1,85 @@
 @use '../../../styles/mixins' as mix
 @use '../../../styles/variables' as var
 
+.bar
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    @include mix.bool-border-red
+
+    height: var.$h-100
+    width: var.$w-100
+    overflow-y: auto
+    overflow-x: hidden
+
+.central
+    @include mix.mixin-display-rw
+    @include mix.mixin-flex-center
+    @include mix.boolean-border
+
+    height: 70rem
+    width: 97%
+    & p
+        font-size: 18px
+        color: var.$color-black
+
+.grid_bar
+    @include mix.mixin-grid("head", "menu", "foot", 12, 1fr, auto)
+    height: var.$h-100
+    width: var.$w-100
+
+.grid_head
+    @include mix.mixin-subgrid
+    @include mix.bool-border-red
+    
+    grid-template: "head"
+    grid-column: 1 / 13
+    grid-row-start: 1
+    grid-row-end: 14
+
+.subgrid_images
+    @include mix.bool-border-green
+    
+    grid-column: 1 / 4
+    grid-row: 2 / 9
+
+.subgrid_descriptions
+    @include mix.bool-border-red
+    
+    grid-column: 4 / 13
+    grid-row: 2 / 9
+
+.grid_menu
+    @include mix.mixin-display-rw
+    @include mix.bool-border-green
+
+    grid-template: "menu"
+    grid-column-start: 1
+    grid-column-end: 13
+    grid-row-start: 14
+    grid-row-end: 27
+
+.grid_foot
+    @include mix.mixin-display-rw
+    @include mix.bool-border-red
+
+    grid-template: "foot"
+    grid-column-start: 1
+    grid-column-end: 13
+    grid-row-start: 27
+    grid-row-end: 31
+
+.carousel 
+    @include mix.mixin-carousel
+    
+.divImg 
+    @include mix.mixin-divImg
+    
+.img 
+    @include mix.mixin-img
+    
+.classNameDivBtn 
+    @include mix.mixin-classNameDivBtn
+    
+.classNameBtn 
+    @include mix.mixin-classNameBtn
+    

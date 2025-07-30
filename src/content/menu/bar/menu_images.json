@@ -1,0 +1,40 @@
+{
+    "img": [
+        {
+            "id": "risotto_artistico_tognana",
+            "src": "https://professional.tognana.com/it/blog/wp-content/uploads/2021/10/come-scegliere-piatti-per-ristorante-a-seconda-dello-stile.jpg",
+            "alt": "risotti artistici tognana",
+            "height": "100",
+            "width": "100",
+            "text": "risotto artistico tognana",
+            "href": ""
+        },
+        {
+            "id": "risotto_rosa_gorgonzola_noci",
+            "src": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/2315be51-5991-49f8-8510-e8bb4c8db48a/9a294501-62f0-4b9d-9ab9-4834f4356119.jpg",
+            "alt": "risotto rosa con salsa di gorgonzola e noci",
+            "height": "100",
+            "width": "100",
+            "text": "risotto al vino con crema di gorgonzola e noci",
+            "href": ""
+        }, 
+        {
+            "id": "bagna_cauda",
+            "src": "https://www.guidatorino.com/wp-content/uploads/2018/01/bagna-cauda-torino-ristoranti.jpg",
+            "alt": "bagna cauda",
+            "height": "100",
+            "width": "100",
+            "text": "la tipica bagna cauda piemontese",
+            "href": ""
+        },
+        {
+            "id": "farinata",
+            "src": "https://www.guidatorino.com/wp-content/uploads/2014/11/farinata-torino-633x400.jpg",
+            "alt": "farinata",
+            "height": "100",
+            "width": "100",
+            "text": "una deliziosa farinata",
+            "href": ""
+        }
+    ]
+}

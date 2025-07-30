@@ -1,6 +1,18 @@
-import path from "path";
+    import path from "path";
 
-export const joinPaths = (resource: string, fileName: string) => {
-    const filePath = path.join(process.cwd(), "src", "content", resource, fileName);
-    return filePath;
-}
+    export const joinPaths = (
+        fileName: string, 
+        nestedDir1?: string, 
+        nestedDir2?: string
+    ) => {
+        
+        const basePath = [process.cwd(), "src", "content"];
+
+        if (nestedDir1) basePath.push(nestedDir1);
+        if (nestedDir2) basePath.push(nestedDir2);
+        
+        basePath.push(fileName);
+
+        return path.join(...basePath);
+    }
+

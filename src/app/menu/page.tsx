@@ -11,7 +11,7 @@ import { insertPhotoIsUnique } from '@/actions/insertPhotIsUnique';
 
 export const Menu = () => {
     const [data, setData] = useState<imgType[]>([]);
-    const [cardText, setCardText] = useState<string>("")
+    // const [cardText, setCardText] = useState<string>("")
 
     useEffect(() => {
         const fetchImages = async () => {
@@ -23,8 +23,7 @@ export const Menu = () => {
             return null;
         }
         fetchImages();
-        console.log(cardText);
-    }, [cardText]);
+    }, []);
 
     const cards: cardsType = {
         classCards: styles.classCards,
@@ -41,7 +40,6 @@ export const Menu = () => {
         <div className={styles.menu}>
             <div className={styles.cardsMenu}>
                 <Cards {...cards} />
-                {/* <CardList {...cardsList} /> */}
             </div>
         </div>
     )

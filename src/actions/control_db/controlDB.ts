@@ -39,7 +39,6 @@ export const controlDataDb = async (): Promise<originId[] | any> => {
 
             const photosToAdd = [...newDawn, ...newSunset];
 
-
             // Foto già presenti nel DB
             const duplicates = allOriginIdPhoto.filter(photo =>
                 dbData.some(el => el.origin_id === photo.origin_id),

@@ -1,17 +1,14 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
 import fs from "fs/promises";
+import { joinPaths } from "@/lib/paths/paths";
 
 export default async function takeDatas(
   req: NextApiRequest,
   res: NextApiResponse,
-  file: { src: string; dir1: string; dir2?: string; dir3?: string }
+  file: { src: string; dir1: string; }
 ) {
   try {
-    const filePath = path.join(
-        process.cwd(),
-        file.src,
-    );
+    const filePath = joinPaths(file.src, file.dir1);
 
     const promiseFile = fs.readFile(filePath, {
         encoding: "utf-8"

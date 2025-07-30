@@ -1,6 +1,7 @@
-import { ComponentType, Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react";
+import { ComponentType, ReactNode } from "react";
 
 interface imgType {
+  id?: string | "";
   src: string;
   alt: string;
   height: number;
@@ -38,6 +39,7 @@ type takeCardsType = Omit<cardsType, "img">;
 interface btnType {
   classButtons: string;
   href: string;
+  child: ReactNode;
 }
 
 interface carouselVidType {
@@ -119,5 +121,5 @@ export type {
   imgType,
   ImageObjType,
   btnType,
-  takeCardsType
+  takeCardsType,
 };

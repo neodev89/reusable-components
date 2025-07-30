@@ -26,6 +26,7 @@ export const Carousel = ({
                     width={img[currentIndex].width}
                     src={img[currentIndex].src}
                     alt={img[currentIndex].alt}
+                    unoptimized
                     priority={true}
                 />
             </div>

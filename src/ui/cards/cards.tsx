@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { cardsType } from "@/@types/components";
 import { Buttons } from "./button-cards";
+import Link from "next/link";
 
 const Cards = ({
     classCards, classCard, classEven, classOdd, classImg, classDivButtons,
@@ -35,9 +35,9 @@ const Cards = ({
                                 {
                                     image.href !== "#" ?
                                         (
-                                            <Buttons href={image.href} classButtons={classButtons} />
+                                            <Buttons href={image.href} classButtons={classButtons} child={"Mostramelo"} />
                                         ) : (
-                                            <Buttons href={"#"} classButtons={classButtons} />
+                                            <Buttons href={"#"} classButtons={classButtons} child={"Mostramelo"} />
                                         )
                                 }
                             </div>

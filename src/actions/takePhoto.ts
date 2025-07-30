@@ -4,7 +4,7 @@ import { initialGallery } from '@/content/photograph/initialState';
 import { joinPaths } from '@/lib/paths/paths';
 
 import fs from 'fs/promises';
-import { insertPhotoIsUnique } from './insertPhotIsUnique';
+// import { insertPhotoIsUnique } from './insertPhotIsUnique';
 
 export const takePhoto = async (): Promise<photoType | null> => {
     try {
